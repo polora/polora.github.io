@@ -1,3 +1,8 @@
+---
+layout:default
+title : chapitre1
+---
+
 Introduction  
 Apprendre à programmer en python  
 
