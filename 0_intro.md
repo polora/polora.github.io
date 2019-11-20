@@ -1,9 +1,9 @@
 Introduction  
 Apprendre à programmer en python  
 
-1. Les variables
+### Les variables
 
-1.1 Déclaration
+## Déclaration
 
 ```
 import os
