@@ -8,11 +8,11 @@ title : Chapitre 3 - Faire des calculs
 ### Les opérateurs mathématiques                                                                                                                                     
 Pour faire des calculs, il faut des nombres (stockés dans nos variables) et des opérateurs que vous connaissez déjà.
 
-* + pour une addition
-* - pour une soustraction
-* * pour une multiplication
-* / pour une division
-* % affiche le reste de la division (9%2 = 1 puisque 9 = 4 x 2 + 1)
+* le + pour une addition
+* le - pour une soustraction
+* le * pour une multiplication
+* le / pour une division
+* le % affiche le reste de la division (9%2 = 1 puisque 9 = 4 x 2 + 1)
 
 Exemples :
 
