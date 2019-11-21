@@ -27,9 +27,9 @@ Exemples :
 
 
 ### Les comparateurs
-* > 	est strictement supérieur à
-* <	est strictement inférieur à
-* >= 	supérieur ou égal à	
+** > 	est strictement supérieur à
+** <	est strictement inférieur à
+** >= 	supérieur ou égal à	
 * <=	inférieur ou égal à
 * ==	est égal à
 * !=	est différent de 
