@@ -22,8 +22,8 @@ Afficher la saisie :
 ```
 
 Comprendre ce code  (formatage d’une chaîne de caractères) :
-    • les accolades {} représentent l’endroit où mettre le contenu de la variable.
-    • la méthode format(prenom, nom) indique ce qu’il faut mettre à la place des accolades (dans le même ordre).
+*les accolades {} représentent l’endroit où mettre le contenu de la variable.
+*la méthode format(prenom, nom) indique ce qu’il faut mettre à la place des accolades (dans le même ordre).
 
 Convertir les saisies
 ATTENTION : quand on saisit une réponse au clavier, on obtient une chaîne de caractères (même quand on saisit un nombre). 
