@@ -41,33 +41,31 @@ Attention, ne pas confondre = (affecter une valeur à une variable) et == !
 	a=5
  	b=8
  	print(a>b)              		
- 	----- Le programme affiche : False (5 n’est pas supérieur à 8)
+Le programme affiche : False (5 n’est pas supérieur à 8)
  
  	print(a==b)				
- 	----- Le programme affiche : False (8 n’est pas égal à 5)
+Le programme affiche : False (8 n’est pas égal à 5)
  
  	print (a!=b)			
- 	----- Le programme affiche : True (8 est différent de 5)
+Le programme affiche : True (8 est différent de 5)
 
-et / ou : AND et OR
-AND 	 : les deux conditions doivent êtres valides
-OR	 : une des deux conditions seulement doit être valides
+### et / ou : AND et OR
+AND 	 : les deux conditions doivent êtres valides  
+OR	 : une des deux conditions seulement doit être valides  
 
 Exemple pour vérifier qu’une note est comprise entre 0 et 20
 	
 	note=15
+ 	print((note>=0)and(note<=20))  #note supérieure à 0 ET inférieure à 20
+Le programme affiche : True (15 est compris entre 0 et 20)
  
-	print((note>=0)and(note<=20))  #note supérieure à 0 ET inférieure à 20
------ Le programme affiche : True (15 est compris entre 0 et 20)
- 
-note=23
- 
-print((note>=0)and(note<=20))   
------ Le programme affiche : False (23 n’est pas entre 0 et 20)
+	note=23
+ 	print((note>=0)and(note<=20))   
+Le programme affiche : False (23 n’est pas entre 0 et 20)
  
 # différence avec OR
  
-print((note>=0)or(note<=20))  #note supérieure à 0 OU inférieure à 20 
------ Le programme affiche : True (23 n’est pas inférieur à 20 mais est supérieur à 0 donc une des conditions est valide) 
+	print((note>=0)or(note<=20))  #note supérieure à 0 OU inférieure à 20 
+Le programme affiche : True (23 n’est pas inférieur à 20 mais est supérieur à 0 donc une des conditions est valide) 
 
-Faites appel à de l’aide en classe (ou par mail pour ceux qui n’assistent pas à l’atelier) si vous ne comprenez pas certains de ces exemples !
+
