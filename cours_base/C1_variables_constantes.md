@@ -30,7 +30,7 @@ La variable score  a d’abord été initialisée avec la valeur 100 puis, en aj
 
 Qu’est-ce que je peux mettre dans une variable ?
 
-## 1.1 – des nombres  
+1.1 – des nombres  
 On en rencontre deux types : 
 	- des nombres entiers : int (pour integer)
 	- des nombres décimaux (à virgule) : float – attention, la virgule est représentée par un point
