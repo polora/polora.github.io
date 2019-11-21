@@ -14,7 +14,8 @@ Pour faire des calculs, il faut des nombres (stockés dans nos variables) et des
 	/ pour une division
 	% affiche le reste de la division (9%2 = 1 puisque 9 = 4 x 2 + 1)
 
-Exemples :
+Exemples :
+`
 a=3
 b=5
 print(a+b)
@@ -24,13 +25,15 @@ print(a*b)
 print(a-b)
  
 print(a/b)
+`
+
 Les comparateurs
-    • > 	est strictement supérieur à
-    • <	est strictement inférieur à
-    • >= 	supérieur ou égal à	
-    • <=	inférieur ou égal à
-    • ==	est égal à
-    • !=	est différent de 
+*> 	est strictement supérieur à
+*<	est strictement inférieur à
+*>= 	supérieur ou égal à	
+<=	inférieur ou égal à
+==	est égal à
+!=	est différent de 
       
 Attention, ne pas confondre = (affecter une valeur à une variable) et == !
 
