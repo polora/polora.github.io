@@ -21,6 +21,6 @@ En python, ça s’écrit avec les mots-clefs if et else (et elif ) :
 	else:
  		print("Nouvelle partie pour sauver la princesse")
 
-TRES IMPORTANT : vous remarquerez que l’instruction est à la ligne et décalée par rapport à if ou else. 
-Cette instruction fait partie, en réalité, d’un bloc. Ce bloc est décalé pour que Python puisse l’interpréter comme les instructions à suivre si la condition est respectée.
+TRES IMPORTANT : vous remarquerez que l’instruction est _à la ligne et décalée_ par rapport à if ou else.   
+Cette instruction fait partie, en réalité, d’un bloc. Ce bloc est décalé pour que Python puisse l’interpréter comme les instructions à suivre si la condition est respectée.  
 Avec pyzo le décalage se fait automatiquement. Sinon on utilise la touche tabulation.
