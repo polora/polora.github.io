@@ -3,7 +3,7 @@ layout : default
 title : Chapitre 1 - Variables et constantes
 ---
 
-## Les variables                                                                                                                                          
+# Les variables                                                                                                                                          
 Une partie TRÈS  importante de la leçon.
 
 Une variable est une zone de mémoire identifiée par une étiquette dans laquelle on stocke une valeur. Cette valeur peut être un nombre, une chaîne de caractères,…
