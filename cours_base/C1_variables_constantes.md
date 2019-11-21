@@ -30,7 +30,7 @@ La variable score  a d’abord été initialisée avec la valeur 100 puis, en aj
 
 Qu’est-ce que je peux mettre dans une variable ?
 
-###	1.1 – des nombres
+### 1.1 – des nombres
 On en rencontre deux types : 
 	- des nombres entiers : int (pour integer)
 	- des nombres décimaux (à virgule) : float – attention, la virgule est représentée par un point
@@ -45,25 +45,28 @@ On peut connaître le type d’une variable avec la commande type
  print(type(prix))
 ```
 
-### 1.2 – des booléens
+### 1.2 – des booléens  
 Permet d’affecter la valeur VRAI ou FAUX à une variable. En anglais, cela s’écrit True ou False. Attention, la majuscule est obligatoire. 
 
-Exemple :
+Exemple :
+```
+partie manquante
+```
 
-
-
-	1.3 – des caractères (du texte)
+### 1.3 – des caractères (du texte)
 Un caractère seul ou une chaîne de caractères (comme dans notre premier programme plus haut). En anglais, on appelle cette chaîne string (str).
 
-Exemples :
+Exemples :
+```
  chaine="A"
  print(chaine)
  chaine="Bonjour"
  print(chaine)
+```
 
 Il existe d’autres types de variables, en particulier les listes, dictionnaires, tuples,…) que nous verrons plus loin.
 
-	1.4 – choisir le nom d’une variable
+### 1.4 – choisir le nom d’une variable
 Le nom d’une variable ne peut contenir que :
     • des lettres (minuscules et majuscules)
     • des chiffres
@@ -78,13 +81,16 @@ Clairement, on fait comment alors ?
 On retrouve régulièrement deux façons de faire :
     • variable écrite en minuscules et une majuscule à chaque mot sauf le premier :  ageUtilisateur
     • variable en minuscules avec un underscore entre chaque mot : age_utilisateur
-3 – Les constantes        
+
+## Les constantes        
 La valeur mise dans une constante (contrairement à celle d’une variable) ne change pas. 
 
 Par convention, on écrit les constantes entièrement en majuscules (pour les différencier des variables).
 
-Exemple :
+Exemple :
+```
  TITRE_JEU = "Legend of Zelda"
  print(TITRE_JEU)     	
  ANNEE = 1986
  print(ANNEE)
+```
