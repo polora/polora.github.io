@@ -1,7 +1,7 @@
 
 --- 
 layout : default
-title : Chapitre 3 - Faire des calculs
+title : Chapitre 3 - Faire des calculs  
 ---
     
 
