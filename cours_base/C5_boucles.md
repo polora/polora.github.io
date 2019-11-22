@@ -12,53 +12,60 @@ while peut se traduire par tant que.
 Les instructions dans le bloc qui suit while se répéteront tant que la condition est vraie.
 
 Exemple :
- i=5
- while i>0 :
- 	print(i)
- 	i-=1 	       # manière abrégée d’écrire i=i-1
+
+	i=5
+ 	while i>0 :
+ 		print(i)
+ 		i-=1 	       # manière abrégée d’écrire i=i-1
 
 Écrire ce programme dans l’éditeur ou l’interpréteur et l’exécuter… Que se passe-t-il ?
 
 Comprendre le code : tant que i est supérieur à 0, les instructions sont répétées (on affiche i et on soustrait 1 à i). Quand i prend la valeur 0 (à force d’enlever 1), la condition i>0 n’est plus respectée, on sort de la boucle while.
-boucle For
+
+# boucle For
 On utilise la boucle for quand on veut parcourir une liste de valeurs (répéter un certain nombre de fois la même action)
 
- for i in range(1,10) :
- 	print (i)
+	for i in range(1,10) :
+ 		print (i)
  
- # est équivalent à 
+ 	# est équivalent à 
  
- i=1
- while i<10 :
- 	print (i)
- 	i+=1
+ 	i=1
+ 	while i<10 :
+ 		print (i)
+ 		i+=1
 
 MAIS, à la différence de while, on peut parcourir autre chose qu’une liste de nombres :
 
- chaine="Hello world !" 
- for lettre in chaine:
- 	print (lettre)
+ 	chaine="Hello world !" 
+ 	for lettre in chaine:
+ 		print (lettre)
  
 Dans ce cas, la boucle for parcourt la chaîne de caractère et affiche chaque lettre une après l’autre
 
 Pour s’amuser un peu, un autre exemple à comprendre :
- for i in range(0,50) :
- 	print("Je ne bavarderai plus pendant le cours d’informatique"
 
-et hop, en 2 lignes ! Y’a plus qu’à imprimer… C’est cool d’être développeur, non ? ;-)
-Sortir d’une boucle ou ne pas exécuter certaines instructions d’une boucle FACULTATIF
-break
+	for i in range(0,50) :
+ 		print("Je ne bavarderai plus pendant le cours d’informatique"
+
+et hop, en 2 lignes ! Y’a plus qu’à imprimer… C’est cool d’être développeur, non ? ;-)*
+
+_FACULTATIF_
+Sortir d’une boucle ou ne pas exécuter certaines instructions d’une boucle : la commande _break_
+
 Il se peut que, dans certains cas, on ait besoin d’interrompre une boucle, par exemple quand l’utilisateur veut quitter le programme.
+
 Pour interrompre une boucle for ou while, on utilise le mot-clef break.
 Exemple : 
- nombre=10
- while nombre>0:
-     print(nombre)
-     nombre-=1		
-     if nombre==5:
-         break
 
-nombre - =1 est une manière plus rapide d’écrire nombre = nombre – 1
+	nombre=10
+ 	while nombre>0:
+     		print(nombre)
+     		nombre-=1		
+     	if nombre==5:
+        	break
+
+_nombre -=1_ est une manière plus rapide d’écrire _nombre = nombre – 1_
 
 Comprendre le programme:
 	- tant que nombre est supérieur à 0 :
@@ -69,10 +76,11 @@ Comprendre le programme:
 Quand on veut revenir au début de la boucle sans exécuter certaines instructions, on utilise continue.
 
 Exemple :
- for chiffre in range(1,10):
-     if (chiffre%2==0):
-         continue
-     print(chiffre)
+
+	for chiffre in range(1,10):
+     		if (chiffre%2==0):
+         		continue
+     		print(chiffre)
 
 Comprendre le programme :
 	- on travaille sur tous les chiffres dans l’intervalle 1 à 9 avec une boucle for
