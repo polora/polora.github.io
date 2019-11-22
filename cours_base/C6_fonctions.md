@@ -36,10 +36,10 @@ Comprendre le programme :
 On a créé une fonction qui calcule la moyenne de 3 notes. Cette fonction renvoie le résultat avec l’instruction return.
 
 Cette fonction  se définit avec le mot-clef def et possède 3 parties :
-	- un nom (calcul_moyenne)
-	- des paramètres (f_note1, f_note2, f_note3) : ce sont les variables qu’il faut impérativement fournir à la fonction. Ici ces variables commencent par f_ (f pour fonction). Cette notation va nous aider à comprendre un point important plus loin (variables locales ou globales).
+* un nom (calcul_moyenne)
+* des paramètres (f_note1, f_note2, f_note3) : ce sont les variables qu’il faut impérativement fournir à la fonction. Ici ces variables commencent par f_ (f pour fonction). Cette notation va nous aider à comprendre un point important plus loin (variables locales ou globales).
 S’il n’y a pas de paramètres, on utilise les parenthèses vides.
-	- un corps : l’ensemble des instructions.
+* un corps : l’ensemble des instructions.
 
 Ensuite, on a recopié dans le programme principal la demande à l’utilisateur des notes à saisir et la conversion en entier.
 Pour calculer la moyenne, on fait appel à la fonction.
