@@ -64,8 +64,8 @@ Exemple :
  	while nombre>0:
      		print(nombre)
      		nombre-=1		
-     	if nombre==5:
-        	break
+     		if nombre==5:
+        		break
 
 _nombre -=1_ est une manière plus rapide d’écrire _nombre = nombre – 1_
 
