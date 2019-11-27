@@ -15,21 +15,22 @@ Pour pouvoir apprendre et créer nos programmes, nous allons installer un enviro
 
 ## Installation sous GNU/Linux Debian et dérivées (Ubuntu, Linux Mint...)                                                                                                                      
 
-Suivre les étapes suivantes et saisir, à chaque fois, les instructions dans un terminal (il faut disposer des droits de superutilisateur) :
+Suivre les étapes suivantes et saisir, à chaque fois, les instructions dans un terminal (il faut disposer des droits du superutilisateur) :
 * installer python (si ce n’est pas déjà fait dans la distribution que vous avez) :  
 ```
 $ sudo apt-get install python3
 ```
-* installer les modules de python dont nous avons besoin (dont _pip_ qui nous servira à installer pyzo, pygame et pygame zero)
+* installer les modules de python dont nous avons besoin (dont _pip_ qui nous servira à installer pyzo, pygame et pygame zero) :
 ```
 $ sudo apt-get install python3-pyqt4 python3-pip python3-setuptools
 $ sudo pip install --upgrade pip
 $ sudo pip install pyzo
 ```
-* installer la bibliothèque utile pour créer des interfaces graphiques (seconde partie du cours)
+* installer les bibliothèques utiles pour créer des interfaces graphiques (seconde partie du cours) :
 ```
 $ sudo pip install pygame
 $ sudo pip install pgzero
+$ sudo apt-get install python3-tk
 ```
 
 Si problème de dépendances :
@@ -37,7 +38,7 @@ Si problème de dépendances :
 $ sudo apt-get build-dep python3-pygame	
 ```
 
-ou (si la commande précédente retourne une erreur)
+ou (si la commande précédente retourne une erreur) :
 ```
 $ sudo apt-get build-dep python-pygame	
 ```
@@ -49,7 +50,7 @@ Cette procédure n’a été testée que sous Windows 10…
 
 ### Installation de Pyzo
 
-* télécharger l'archive pyzo for Windows sur la page [http://www.pyzo.org/start.html](http://www.pyzo.org/start.html)
+* télécharger l'archive pyzo pour Windows sur la page [http://www.pyzo.org/start.html](http://www.pyzo.org/start.html)
 
 * une fois l'archive téléchargée, aller dans le répertoire de Téléchargement, double-cliquer sur l'archive et suivre les instructions données par le programme d'installation.
 
@@ -66,7 +67,7 @@ Cette procédure n’a été testée que sous Windows 10…
 	
 A ce stade, notre environnement de travail est installé mais incomplet. Nous pouvons écrire des programmes en Python mais pas les exécuter. Pour remédier à ça, il faut installer un _shell_ ou _interpréteur_ :
 
-* télécharger sur la page http://www.pyzo.org/start.html : Miniconda for Windows 64bits
+* télécharger sur la page [http://www.pyzo.org/start.html](http://www.pyzo.org/start.html) : _Miniconda for Windows 64bits_
       
 * aller dans le répertoire et double-cliquer sur le programme d'installation
       
@@ -76,7 +77,7 @@ A ce stade, notre environnement de travail est installé mais incomplet. Nous po
       
 * dans la partie shell, un message en anglais est apparu. Il annonce que Miniconda est détecté
       
-* cliquer sur Use this environment
+* cliquer sur _Use this environment_
 
 ### Installer Pygame
 
@@ -108,21 +109,21 @@ pip install pgzero
 
 Modifier la variable d’environnement PATH ; pour que Windows sache où trouver pgzero, il faut indiquer le chemin pour aller chercher ce programme.
 
-* Démarrer / Paramètres
+* _Démarrer_ / _Paramètres_
       
-* dans la barre « Rechercher un paramètre », taper variable et cliquer sur « Modifier les variables d’environnement système » 
+* dans la barre _Rechercher un paramètre_, taper variable et cliquer sur _Modifier les variables d’environnement système_ 
       
-* dans la fenêtre qui apparaît, cliquer sur le bouton Variables d’environnement
+* dans la fenêtre qui apparaît, cliquer sur le bouton _Variables d’environnement_
       
-* dans Variables système, double cliquer sur Path et ajouter à la liste qui apparaît C:\Users\votre_nom_utilisateur\Miniconda3\Scripts et cliquer sur OK
+* dans _Variables système_, double cliquer sur _Path_ et ajouter à la liste qui apparaît _C:\Users\votre\_nom\_utilisateur\Miniconda3\Scripts_ et cliquer sur _OK_
 	
 ## S’il y a des questions…                                                                                                                  
 
 Les informations qui sont dans ce document proviennent des pages officielles :
 
-* Pyzo : http://www.pyzo.org/start.html
+* Pyzo : [http://www.pyzo.org/start.html](http://www.pyzo.org/start.html)
       
-* Pygame : https://www.pygame.org/wiki/GettingStarted
+* Pygame : [https://www.pygame.org/wiki/GettingStarted](https://www.pygame.org/wiki/GettingStarted)
       
 S’y reporter s’il y a des questions…
 

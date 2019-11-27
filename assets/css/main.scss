@@ -163,3 +163,12 @@ blockquote.cite {
     pre, table { page-break-inside: avoid }
     .allow-breaks { page-break-inside: auto }
 }
+
+
+/* YF */
+img[src*="#center"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
