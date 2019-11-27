@@ -1,0 +1,24 @@
+# Settings
+#baseurl: /class-boilerplate
+permalink: pretty
+
+# About
+title: Cours Python
+tagline: cours Python pour les élèves du collège AR
+authors:
+  - name: YF - polora
+    url: 'http://www.polora.fr/memento'
+created: 2017
+license:
+  name: MIT license
+  shortname: MIT license
+  url: /LICENSE
+  
+# Collections
+collections:
+  addons:
+    output: true
+    permalink: /:collection/:path:output_ext
+
+kramdown:
+  parse_block_html: true
