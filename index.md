@@ -28,5 +28,5 @@ Ces cours sont également disponibles au format PDF [ici](http://www.polora.fr/m
 ## Exercices niveau facile  
 * [exercices sur input() et les calculs](../exercices_1/C2_C3_input_calculs)
 * [exercices sur les conditions](../exercices_1/C4_conditions)
-
-
+* [exercice sur la boucle while](../exercices_1/C5_boucle_while)
+* [exercice sur la boucle for](../exercices_1/C6_boucle_for)

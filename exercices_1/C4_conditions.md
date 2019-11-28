@@ -22,4 +22,4 @@ Créer un programme qui
 * demande à l’utilisateur de saisir un nombre
 * affiche à l’écran si le nombre est positif, négatif ou nul
 
-_[Voir la correction](../scripts/C4Ex2_Ex2_signe.py)_
+_[Voir la correction](../scripts/C4Ex2_signe.py)_
