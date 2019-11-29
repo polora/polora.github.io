@@ -26,4 +26,4 @@ Reprendre le programme de calcul de moyenne écrit dans le chapitre précédent 
 
 
 Petit plus (encore !) : il faudrait vérifier aussi que chaque note saisie est bien un nombre et pas un caractère… à voir ci-dessous pour les plus motivés.  
-[Voir la correction du petit plus...](../scripts/C6Ex14_moyenne_amélioré_version2.py)
+[Voir la correction du petit plus...](../scripts/C6Ex4_moyenne_amélioré_version2.py)
