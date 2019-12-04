@@ -3,17 +3,19 @@ layout : default
 title : Chapitre 2 - dialoguer avec l'utilisateur
 ---
 
+# Dialoguer avec l'utilisateur
+
 Pour récupérer ce que l’utilisateur saisit au clavier, on utilise la fonction _input()_.
 
-### Exemple d'utilisation de _input()_
+## Exemple d'utilisation de _input()_
 
 ```
  prenom = input("Quel est ton prénom ? : ")
  print("Bonjour ",prenom)
 ```
-La variable prenom a pris pour valeur la réponse à la question _Quel est ton prénom ?_.
+La variable _prenom_ a pris pour valeur la réponse à la question _Quel est ton prénom ?_.
 
-### Afficher la saisie :
+## Afficher la saisie :
 ```
  prenom = input("Quel est ton prénom ? : ")
  nom = input("Quel est ton nom ? : ") 
@@ -22,12 +24,12 @@ La variable prenom a pris pour valeur la réponse à la question _Quel est ton p
 
 Comprendre ce code  (formatage d’une chaîne de caractères) : 
 * les accolades {} représentent l’endroit où mettre le contenu de la variable.
-* la méthode format(prenom, nom) indique ce qu’il faut mettre à la place des accolades (dans le même ordre).
+* la méthode _format(prenom, nom)_ indique ce qu’il faut mettre à la place des accolades (dans le même ordre).
 
-### Convertir les saisies
-ATTENTION : quand on saisit une réponse au clavier, on obtient une chaîne de caractères (même quand on saisit un nombre). 
+## Convertir les saisies
+__ATTENTION__ : quand on saisit une réponse au clavier, on obtient une chaîne de caractères (même quand on saisit un nombre). 
 
-PENSER donc à convertir la chaîne en nombre pour faire des calculs ! 
+__PENSER donc à convertir la chaîne en nombre pour faire des calculs !__ 
 
 Exemple :
 ```

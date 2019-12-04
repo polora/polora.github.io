@@ -21,6 +21,9 @@ _Novembre 2019_
 * [exercice sur la boucle for](../exercices_1/C6_boucle_for)
 * [toutes les corrections des exercices de cette section dans un dépôt (plus facile à lire)](https://github.com/polora/polora.github.io/tree/master/exercices_1/scripts)
 
+## S'exercer : niveau difficile 
+En cours de construction...
+
 ## Se former : notions de base en Python
 
 * [Premier programme](cours_1/C0_premier_programme)
@@ -34,7 +37,12 @@ _Novembre 2019_
 * [Chapitre 8 - les chaines de caractères](cours_1/C8_chaine_caracteres)
 
 ## Se former : notions avancées en Python
-* [Chapitre 9 - objets et classes](cours_2/C9_objets_classes)
-* [Chapitre 10 - chaînes de caractères niveau 2]
+* [Chapitre 9 - les objets et classes (Programmation Orientée Objet)](cours_2/C9_objets_classes)
+* [Chapitre 10 - les listes](cours_2/C10_listes)
+* [Chapitre 11 - les chaînes de caractères niveau 2](cours_2/C11_chaines_caracteres_2)
+* [Chapitre 12 - les tuples]()
+* [Chapitre 13 - les dictionnaires]()
+
+
 
 

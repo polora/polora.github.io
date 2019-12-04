@@ -1,4 +1,0 @@
-En plus de ressembler à un tableau à une ligne et plusieurs colonnes où chaque case est une lettre, la chaîne est aussi un objet.
-
-Les objets chaîne possèdent (comme tous les autres objets, pardi!) des méthodes prédéfinies qui leur sont associées. 
-Nous avons vu la méthode format(). Nous allons en voir d’autres.
