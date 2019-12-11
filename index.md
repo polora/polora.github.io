@@ -7,7 +7,7 @@ title: Home
 
 Cours de Python à destination des élèves du club info du collège Alfred Renoleau (ou de n'importe quel visiteur souhaitant découvrir ce langage ;-)  
 Les cours non présents ici sont disponibles au format PDF [ici](http://www.polora.fr/memento) mais ne sont, pour l'instant, plus tenus à jour.  
-_Novembre 2019_
+_Dernière mise à jour Décembre 2019_
 
 ## Avant de se lancer...
 
@@ -21,6 +21,7 @@ _Novembre 2019_
 * [Cours dédié à l'utilisation de tkinter](index_tkinter)
 
 ## Graphismes avec Pygame / Pygame Zero
+* [Cours dédié à l'utilisation Pygame Zero](index_pgzero)
 
 
 
