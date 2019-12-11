@@ -1,0 +1,35 @@
+## Les canevas	
+Un canevas est une _zone rectangulaire_ de la fenêtre qui pourra contenir des dessins ou d’autres figures.
+
+Dans l’exemple qui suit, nous supprimons le frame de gauche de l’exemple précédent et on le remplace par un canevas à fond vert. 
+Le frame de droite a été redimensionné par rapport à l’exemple précédent.
+
+```
+# coding:utf-8
+# Amélioration des fenetres précédentes avec un canevas
+
+from tkinter import *
+
+maFenetre=Tk()
+maFenetre.title('Fenetre avec widgets')
+maFenetre.geometry('600x600+150+100')
+
+# Création d'un canevas de couleur verte et de dimension 400 x 500
+Canevas=Canvas(maFenetre, width=400,height=500,bg='green')
+
+# Création d'un frame
+Frame=Frame(maFenetre,borderwidth=2,width=200,height=500,relief=GROOVE,bg="white")
+Etiquette=Label(Frame, text="Hello World !",fg="navy",bg="yellow")
+Bouton_Quitter=Button(Frame,text="Quitter", command=maFenetre.destroy)
+
+# Le frame est placé à droite
+Frame.pack(side=RIGHT,padx=5,pady=5)
+Frame.pack_propagate(0)
+
+# Ajout du canevas à la fenêtre
+Canevas.pack(side=LEFT,padx=5,pady=5)
+
+Etiquette.pack(side=TOP,padx=5,pady=5)
+Bouton_Quitter.pack(side=BOTTOM,padx=5,pady=5)
+
+maFenetre.mainloop()

@@ -35,7 +35,7 @@ Améliorations à apporter :
 3. plus dur ! : vérifier que l’utilisateur n’a pas oublié de saisir ou saisi autre chose qu’un nombre...
 4. … toute amélioration que vous jugez utile
 
-[Voir la correction](../scripts/C5Ex1_nbmystere.py)
+[Voir la correction](https://github.com/polora/polora.github.io/tree/master/exercices_1/scripts/C5Ex1_nbmystere.py)
 
-[Voir la correction avec les améliorations](../scripts/C5Ex2_nbmystere_amélioré.py)
+[Voir la correction avec les améliorations](https://github.com/polora/polora.github.io/tree/master/exercices_1/scripts/C5Ex2_nbmystere_amélioré.py)
 

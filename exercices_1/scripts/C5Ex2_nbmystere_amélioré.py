@@ -24,8 +24,8 @@ while (tentative!=nb_mystere):
     # on vérifie que le nombre d'essais max n'est pas atteint
     # si c'est le cas, on met fin à la boucle while avec break
     if nb_essais>=nb_essais_max:                            
-        print("\nPerdu ! Vous avez effectués 6 tentatives sans succès...")
-        print("Le nombre mystère était : ",nb_mystere)
+        print("\nPerdu ! Vous avez effectué 6 tentatives sans succès...")
+        print("Le nombre mystère était {} : ".format(nb_mystere))
         break                                               
     
     # si le nombre d'essai max n'est pas atteint, on demande à l'utilisateur de proposer un nombre
@@ -45,12 +45,12 @@ while (tentative!=nb_mystere):
             elif tentative<nb_mystere:
                 print("Le nombre mystere est plus grand")
             else:
-                print("\nBRAVO ! Trouvé en ",nb_essais," coups. \nLe nombre mystère était : ",nb_mystere)
+                print("\nBRAVO ! Trouvé en {} coups. \nLe nombre mystère était : {}".format(nb_essais,nb_mystere))
     
         # si le nombre n'est pas dans l'intervalle on n'incrémente pas le nombre d'essais et on informe l'utilisateur
         else:
             print("Le nombre est compris entre 1 et 50 !")
-            nb_essais+=112
+            nb_essais+=1
             
     
     # si l'utilisateur a fait une erreur lors de la saisie

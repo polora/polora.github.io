@@ -18,7 +18,7 @@ Classe : 3C
 
 
 
-_[Voir la correction](../scripts/C2Ex1_fiche.py)_
+_[Voir la correction](https://github.com/polora/polora.github.io/tree/master/exercices_1/scripts/C2Ex1_fiche.py)_
 
 ## Exercice 2 : calculer la moyenne de 3 notes
 
@@ -26,7 +26,7 @@ Ecrire un programme :
 * qui demande à l’utilisateur de saisir 3 notes
 * calcule la somme des 3 notes puis calcule et affiche la moyenne des 3
 
-_[Voir la correction](../scripts/C2Ex2_moyenne.py)_
+_[Voir la correction](https://github.com/polora/polora.github.io/tree/master/exercices_1/scripts/C2Ex2_moyenne.py)_
 
 
 Améliorations possibles (et indispensables!!!) :
