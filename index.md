@@ -6,7 +6,6 @@ title: Home
 # {{ site.title }}
 
 Cours de Python à destination des élèves du club info du collège Alfred Renoleau (ou de n'importe quel visiteur souhaitant découvrir ce langage ;-)  
-Les cours non présents ici sont disponibles au format PDF [ici](http://www.polora.fr/memento) mais ne sont, pour l'instant, plus tenus à jour.  
 _Dernière mise à jour Décembre 2019_
 
 ## Avant de se lancer...

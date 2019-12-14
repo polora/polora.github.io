@@ -1,24 +1,24 @@
 # Settings
-#baseurl: /class-boilerplate
-permalink: pretty
 
-# About
-title: Apprendre à programmer en Python
-tagline: cours Python pour les élèves du collège AR
-authors:
-  - name: YF - polora
-    url: 'http://www.polora.fr/memento'
-created: 2017
+# Setup
+title:        Apprendre à programmer en Python
+tagline:      Cours de Python pour les élèves du collège AR
+baseurl:      ""
+paginate:     1
+locale:       "fr"
+
+# About/contact
+author:
+  name:       YF
+  url:        http://www.polora.fr/memento 
+
 license:
-  name: CC BY-NC-SA
-  shortname: CC BY-NC-SA
-  url: /LICENSE
-  
-# Collections
-collections:
-  addons:
-    output: true
-    permalink: /:collection/:path:output_ext
+  name: 	CC BY-NC-SA
+  shortname: 	CC BY-NC-SA
+  url: 		https://creativecommons.org/
+# Gems
+gems:
+  - jekyll-paginate
 
-kramdown:
-  parse_block_html: true
+#Others
+markdown: kramdown

@@ -1,1 +1,0 @@
-{% if page.collection %}{{ page.relative_path }}{% else %}{{ page.path }}{% endif %}
