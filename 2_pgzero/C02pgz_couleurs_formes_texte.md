@@ -51,6 +51,8 @@ Seule différence par rapport aux Maths, ici, le graphique est à l’envers. Le
 ```
 # pgzeroC2-2.py
 
+import pgzrun
+
 WIDTH, HEIGHT = 800, 600
 
 BLANC = (255,255,255)
@@ -75,7 +77,9 @@ def draw():
     #screen.draw.circle((400,300),200,ROUGE) 
        
     # dessiner un cercle
-    screen.draw.filled_circle((400,300),200,ROUGE)   
+    screen.draw.filled_circle((400,300),200,ROUGE)  
+
+pgzrun.go() 
 ```
 
 Comprendre le programme : 
@@ -94,7 +98,7 @@ Comprendre le programme :
 ## Insérer du texte
 
 Avant de commencer, créer un dossier nommé _fonts_ dans le dossier où sont les programmes python. 
-Y mettre les polices _Hand of Sean_ et _Imagine Font_ (téléchargeables sur _dafont.com_ ou présentes dans le fichier de ressources avec les cours).
+Y mettre la police _Imagine Font_ (téléchargeable sur _dafont.com_ ou présente dans le dossier _scripts/pgzero_cours_ sur ce dépôt Github).
 
 ```
 # pgzeroC2-3.py

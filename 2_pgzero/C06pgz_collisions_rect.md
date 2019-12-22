@@ -17,8 +17,7 @@ Il existe de nombreux types de collision (collision contre une surface plane, ce
 Pour simplifier, nous nous limiterons ici à la collision entre deux surfaces rectangulaires. 
 
 ```
-# pgzeroC5-1.py - collisions -  version 1
-# gestion des collisions entre des formes rectangulaires
+# pgzeroC6-1.py
 
 import pgzrun
 
@@ -40,43 +39,44 @@ couleur1 = VERT
 couleur2 = VERT
 
 def draw():
-	screen.clear()
-	screen.draw.filled_rect(carre, BLANC)
-	screen.draw.filled_rect(rectangle1, couleur1) 
-	screen.draw.filled_rect(rectangle2, couleur2)
+    screen.clear()
+    screen.draw.filled_rect(carre, BLANC)
+    screen.draw.filled_rect(rectangle1, couleur1)
+    screen.draw.filled_rect(rectangle2, couleur2)
 
 def deplacement():
-if keyboard.right:
-	if carre.right <= WIDTH:
-		carre.x += vitesse_carre
-	elif keyboard.left:        
-		if carre.left >= 0 :    
-			carre.x -= vitesse_carre
-	elif keyboard.down:        
-		if carre.bottom <= HEIGHT:
-			carre.y += vitesse_carre
-	elif keyboard.up:
-		if carre.top >= 0:
-			carre.y -= vitesse_carre
+    if keyboard.right:
+        if carre.right <= WIDTH:
+            carre.x += vitesse_carre
+    elif keyboard.left:
+        if carre.left >= 0 :
+            carre.x -= vitesse_carre
+    elif keyboard.down:
+        if carre.bottom <= HEIGHT:
+            carre.y += vitesse_carre
+    elif keyboard.up:
+        if carre.top >= 0:
+            carre.y -= vitesse_carre
 
 def update():
-	global couleur1, couleur2
+    global couleur1, couleur2
 
-	deplacement()
+    deplacement()
 
-	# gestion des collisions entre rectangles
-	if carre.colliderect(rectangle1):
-		couleur1 = ROUGE
-	if carre.colliderect(rectangle2):
-		couleur2 = ROUGE    
-	
-	# réinitialisation des réctangles en appuyant sur la touche Espace
-	if keyboard.SPACE:
-		couleur1 = VERT
-		couleur2 = VERT
+    # gestion des collisions entre rectangles
+    if carre.colliderect(rectangle1):
+        couleur1 = ROUGE
+    if carre.colliderect(rectangle2):
+        couleur2 = ROUGE
+
+    # réinitialisation des réctangles en appuyant sur la touche Espace
+    if keyboard.SPACE:
+        couleur1 = VERT
+        couleur2 = VERT
+
 pgzrun.go()
-```
 
+```
 
 __Comprendre le programme :__
 

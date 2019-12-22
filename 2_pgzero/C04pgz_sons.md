@@ -11,7 +11,7 @@ Comme pour les images, il faut commencer par créer un dossier _sounds_ dans ré
 Dans l’exemple qui suit, nous utiliserons le fichier son _shoot.wav_ présent dans les ressources téléchargeables :
 
 ```
-# pgzeroC3-4.py
+# pgzeroC4-1.py
 
 import pgzrun,time
 
@@ -44,7 +44,7 @@ Exemples :
 * Bb4 : Si bémol à la 4ème octave
 
 ```
-# pgzeroC3-5.py
+# pgzeroC4-2.py
 
 import pgzrun
 

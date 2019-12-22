@@ -46,7 +46,7 @@ NOIR = (0,0,0)
 
 def draw():
     screen.fill(NOIR)
-    screen.blit(‘tree’,(100,100))
+    screen.blit("tree",(100,100))
     
 pgzrun.go()
 ```

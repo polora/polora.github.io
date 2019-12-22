@@ -13,6 +13,13 @@ title: Home Pygame Zero
 * [Gérer les collisions entre des rectangles](../2_pgzero/C06pgz_collisions_rect)
 * [Gérer les collisions entre des images](../2_pgzero/C07pgz_collisions_images)
 
+# S'exercer avec Pygame Zero : jeu Breakout
+
+* [Créer le décor d'un Breakout](../2_pgzero/pgz_breakout_ex01)
+* [Déplacement de la raquette](../2_pgzero/pgz_breakout_ex02)
+* [Rebond de la balle](../2_pgzero/pgz_breakout_ex03)
+* [Collision entre la balle et la raquette](../2_pgzero/pgz_breakout_ex04)
+
 
 
 

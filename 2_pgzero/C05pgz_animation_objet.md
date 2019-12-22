@@ -31,7 +31,7 @@ __Il faut bien comprendre ce principe général.__ Et voir ensuite le fonctionne
 Créons la base : un décor de jeu avec un vaisseau spatial (image à prendre dans les ressources fournies):
 
 ```
-# pgzeroC4-1.py
+# pgzeroC5-1.py
 
 import pgzrun
 
@@ -51,7 +51,7 @@ pgzrun.go()
 Créons maintenant un événement qui est lié à l’horloge :
 
 ```
-# pgzeroC4-2.py
+# pgzeroC5-2.py
 
 import pgzrun, time
 
@@ -83,7 +83,7 @@ Pour modifier l’apparence de notre fenêtre en fonction de ce que l’utilisat
 Faisons déplacer notre vaisseau à droite et à gauche :
 
 ```
-# pgzeroC4-3.py
+# pgzeroC5-3.py
 
 import pgzrun
 
@@ -110,24 +110,40 @@ __Comprendre le programme :__
 * si la touche flèche droite (_keyboard.right_) du clavier est enfoncée, la position horizontale x (_vaisseau.x_) augmente de 5. Le vaisseau se déplace donc de 5 pixels vers la droite.
 * même chose ensuite pour la gauche
 
-__Problème__ : le vaisseau sort du décor ! 
-Solution (on ne modifie que la fonction _update()_) :
+__Problème__ : le vaisseau sort du décor !  
+
 
 ```
-def update():
+# pgzeroC5-4.py
+
+import pgzrun
+
+WIDTH, HEIGHT = 800, 600
+NOIR = (0,0,0)
+
+vaisseau = Actor('vaisseau')
+vaisseau.pos = 400,500
+
+def draw():
+	screen.fill(NOIR)
+	vaisseau.draw()
+
+def update() :
 	if keyboard.right:
-    			if vaisseau.right <= WIDTH:
-        		vaisseau.x += 5
+		if vaisseau.right <= WIDTH:
+			vaisseau.x += 5
 	if keyboard.left:
-			if vaisseau.left >= 0 :
-        		vaisseau.x -= 5
+		if vaisseau.left >= 0 :
+			vaisseau.x -= 5
+
+pgzrun.go()
 ```
 
 __Comprendre l’amélioration :__
 * _vaisseau.right_ désigne la droite du vaisseau. On ne déplace le vaisseau vers la droite que si la touche droite du clavier est enfoncée ET SI la droite du vaisseau ne dépasse pas la largeur de la fenêtre.
 * même chose pour la gauche avec _vaisseau.left_
 
-__EXERCICE 5-1 : animer complètement notre vaisseau__  
+__A toi de continuer : animer complètement notre vaisseau__  
 Compléter le code précédent pour que le vaisseau se déplace aussi vers le haut et le bas SANS sortir de la fenêtre.
 
 Aide : 
@@ -136,6 +152,41 @@ Aide :
 	
 * touche clavier bas : _keyboard.down_
 * touche clavier haut : _keyboard.up_
+
+Correction :
+
+```
+# pgzeroC5-5.py - correction de l'exercice
+
+import pgzrun
+
+WIDTH, HEIGHT = 800, 600
+NOIR = (0,0,0)
+
+vaisseau = Actor('vaisseau')
+vaisseau.pos = 400,500
+
+
+def draw():
+    screen.fill(NOIR)
+    vaisseau.draw()
+
+def update():
+    if vaisseau.right <= WIDTH:
+        if keyboard.right:
+            vaisseau.x += 5
+    if vaisseau.left >= 0:
+        if keyboard.left:
+            vaisseau.x -= 5
+    if vaisseau.bottom <= HEIGHT:
+        if keyboard.down:
+            vaisseau.y += 5
+    if vaisseau.top >= 0:
+        if keyboard.up:
+            vaisseau.y -= 5
+
+pgzrun.go()
+```
 
 ## Evénements liés à la  souris                                                                                                                            
 
@@ -146,13 +197,27 @@ Les événements liés à la souris sont gérés par des fonctions particulière
 Remplace donc le _def update()_ du programme précédent par ce qui suit :
 
 ```
-# pgzeroC4-5.py
+# pgzeroC5-6.py
+
+import pgzrun
+
+WIDTH, HEIGHT = 800, 600
+NOIR = (0,0,0)
 
 def on_mouse_move(pos):
     vaisseau.pos = pos
 
-def on_mouse_down(button,pos) :
-	print("Clic sur le bouton ", button, " à la position : ",pos)
+def on_mouse_down(button,pos) :
+	print("Clic sur le bouton ", button, " à la position : ",pos)
+
+vaisseau = Actor('vaisseau')
+vaisseau.pos = 400,500
+
+def draw():
+    screen.fill(NOIR)
+    vaisseau.draw()
+
+pgzrun.go()
 ```
 
 __Comprendre le programme :__ 
@@ -167,19 +232,30 @@ __Comprendre le programme :__
 ## Complément : savoir sur quel bouton de la souris l'utilisateur a appuyé
 
 ```
-# pgzeroC4-6.py 
+# pgzeroC5-7.py
 
-def on_mouse_down(button) :
-	if button == mouse.LEFT:
-			print("Bouton gauche")
-	if button == mouse.RIGHT:
-			print("Bouton droit")
-	if button == mouse.WHEEL_DOWN:
-			print("Mollette bas")
-	if button == mouse.WHEEL_UP:
-			print("Mollette haut")
-		if button == mouse.MIDDLE:
-			print("Bouton du milieu")
+import pgzrun
+
+WIDTH, HEIGHT = 800, 600
+NOIR = (0,0,0)
+
+def on_mouse_down(button) :
+    if button == mouse.LEFT:
+        print("Bouton gauche")
+    if button == mouse.RIGHT:
+        print("Bouton droit")
+    if button == mouse.WHEEL_DOWN:
+        print("Mollette bas")
+    if button == mouse.WHEEL_UP:
+        print("Mollette haut")
+    if button == mouse.MIDDLE:
+        print("Bouton du milieu")
+
+def draw():
+    screen.fill(NOIR)
+
+pgzrun.go()
+
 ```
 
 __EXERCICE 5-2 : déplacement de raquette dans Breakout__
