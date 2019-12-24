@@ -15,7 +15,7 @@ Un exemple ci-dessous qui apporte des nouveautés :
 * changement d’image au moment de la collision.
 
 ```
-# pgzeroC5-2.py – collisions – version 2
+# pgzeroC7-1.py – collisions – version 2
 
 import pgzrun
 WIDTH, HEIGHT = 800,600
