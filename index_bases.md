@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Les bases en Python
 ---
 
 # Bases de programmation en Python

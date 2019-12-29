@@ -58,7 +58,7 @@ print(message)
 ```
 
 ### Sélection d'une partie de la chaîne
-Une chaîne de caractères est comme un tableau avec des cases numérotées à partir de 0. On peut accéder au contenu de chaque case.
+Une chaîne de caractères est comme un tableau à une ligne avec des cases numérotées à partir de 0. On peut accéder au contenu de chaque case.
 Par exemple, la première lettre d’une chaîne se notera : _chaine[0]_.
 ```
 message = "Hello World !"
@@ -81,12 +81,32 @@ print(message)
 ```
 Essayer ! Le message n’est plus le même !
 
-A vous maintenant de tester dans votre coin. Créez des chaînes, concaténez-les, modifiez-les….
+### Parcourir une chaine avec une boucle _for_ ou _while_
+
+```
+chaine = "Bonjour"
+
+# avec une boucle while
+i = 0
+while i < len(chaine):
+    print(chaine[i])
+    i += 1
+    
+print("\n") # saute une ligne
+    
+# avec une boucle for
+for i in range(0,len(chaine)):
+    print(chaine[i])
+```
+
+Une chaîne de caractères étant comme un tableau à une ligne, avec les boucles, on affiche le tableau case par case.
+
+__A vous maintenant de tester dans votre coin. Créez des chaînes, concaténez-les, modifiez-les….__
 
 ### Méthodes prédéfinies
 
-Cette partie fait appel à des notions de Programmation Orientée Objet (POO) qu'il faut d'abord maîtriser.
-Se reporter donc au chapitre qui y est consacré pour retrouver la suite de ce cours.
+Cette partie fait appel à des notions de Programmation Orientée Objet (POO) qu'il faut d'abord maîtriser.  
+Se reporter donc au chapitre qui y est consacré pour s'atteler ensuite à la seconde partie du cours sur les chaînes de caractères.
 
 
 

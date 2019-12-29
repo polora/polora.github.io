@@ -79,12 +79,15 @@ Bouton_Quitter.pack(side=BOTTOM,padx=5,pady=5)
 maFenetre.mainloop()
 ```
 
-## Cases à cocher
+## Cases à cocher
 
-## Entry
+A venir...
 
+## Entry
 
-## Placer plus facilement ses widgets dans sa fenêtre avec la méthode _grid()_
+A venir...
+
+## Placer plus facilement ses widgets dans sa fenêtre avec la méthode _grid()_
 
 La méthode _grid()_ permet de découper sa fenêtre comme une grille, un tableau fait de lignes (_row_) et colonnes(_column_)
 Ces colonnes et ces lignes sont numérotées à partir de 0.
@@ -103,8 +106,9 @@ maFenetre.mainloop()
 
 ``` 
 
-A FAIRE :
+A VENIR :
 * les cases à cocher 
+* Sasie utilisateur avec Entry
 * pack() et  grid()
 
 

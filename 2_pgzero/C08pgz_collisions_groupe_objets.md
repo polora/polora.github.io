@@ -52,5 +52,72 @@ Pour interagir avec un objet (dans notre cas, une image représentant un personn
 
 __Exemple__ : à partir de la liste dans le programme précédent, le 6ème personnage est identifié par _cibles[5]_.
 
+```
+# pgzeroC8-2.py - collisions avec un groupe d'images
+  
+import pgzrun
+  
+WIDTH, HEIGHT = 800,600
+  
+# personnage
+personnage = Actor('perso_droite')
+personnage.pos = (400,500)
+perso_vitesse = 5
+  
+# liste de vies
+cibles = []
+  
+for i in range(8):
+	cibles.append(
+	Actor('cible_on', topleft=((images.cible_on.get_width() * 1.4 * i + 50), 100))
+	)  
+  
+def deplacement_personnage():
+	if keyboard.right:
+		if personnage.right <= WIDTH :
+			personnage.x+= perso_vitesse
+			personnage.image = 'perso_droite'
+	elif keyboard.left:        
+		if personnage.left >= 0 :
+			personnage.x -= perso_vitesse
+			personnage.image = 'perso_gauche'
+	elif keyboard.up:        
+		if personnage.top >= 0:
+			personnage.y -= perso_vitesse
+			personnage.image = 'perso_haut'
+	elif keyboard.down:
+		if personnage.bottom <= HEIGHT:
+			personnage.y += perso_vitesse
+			personnage.image = 'perso_bas'
+  
+def draw():
+	screen.fill((255,255,0))
+	personnage.draw()
+	for i in range (len(cibles)):
+		cibles[i].draw()
+      
+def update():
+	deplacement_personnage()
+  
+	for i in range(len(cibles)):
+		if personnage.colliderect(cibles[i-1]):
+			cibles[i-1].image = 'cible_off'
+    
+pgzrun.go()
+```
+
+
+__Comprendre le programme :__
+
+La seule nouveauté par rapport aux exemples précédents se situe dans la fonction _update()_.
+
+Dans une boucle _for_, pour chaque élément de la liste cibles, on regarde s’il est entré en collision avec le personnage, et, si oui, l’image associée à cet élément est modifiée.
+
+EXERCICE 5-2 : amélioration de notre Breakout : briques et collisions
+* étape 1 : la liste des briques
+Créer une liste soit de rectangles blancs soit d’images de rectangles blancs représentant les briques 
+Les afficher
+* étape 2 : modifier le programme pour gérer les collisions entre les briques et la balle
+* étape 3 : créer une variable score qui prend comme valeur le nombre de briques au départ moins le nombre de briques restantes et afficher ce score dans un coin de l’écran
 
 

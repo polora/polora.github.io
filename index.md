@@ -22,5 +22,8 @@ _Dernière mise à jour Décembre 2019_
 ## Graphismes avec Pygame / Pygame Zero
 * [Cours dédié à l'utilisation Pygame Zero](index_pgzero)
 
+## Ressources
+* [Quelques ressources à consulter](ressources)
+
 
 

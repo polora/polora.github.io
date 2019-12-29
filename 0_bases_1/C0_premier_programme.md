@@ -23,6 +23,8 @@ L'environnement de développpement _pyzo_ comporte deux zones distinctes :
 
 On peut exécuter le script sans sauvegarder en appuyant sur _F5_.
 
+Si l’exécution du programme génère des erreurs (en rouge dans l’interpréteur), essayer de comprendre quelle erreur a été produite (le plus souvent c’est une erreur de frappe – syntax error) ou demander au professeur de l’aide.
+
 # Notre premier programme
 
 ```

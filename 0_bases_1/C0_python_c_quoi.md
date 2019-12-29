@@ -27,20 +27,3 @@ Nous utiliserons __Pyzo__. Il en existe d'autres comme _PyCharm_, _Wing IDE_ par
 
 __On ne devient pas développeur  en une semaine ou un mois. Il va te falloir du temps et de la patience pour comprendre et apprendre. Les développeurs qui travaillent en ce moment sur la fabrication de jeux vidéo ou d’applis sont passés exactement par les mêmes étapes que celles que tu vas suivre…__
 
-# D'autres pistes
-
-Pour apprendre à programmer en Python, il ne faut pas se limiter à ce cours.
-
-Les ressources sont très nombreuses, quelques exemples :
-* Des livres comme l'excellent _Python pour les kids_
-
-![livre Python for Kids](../images/python_for_kids.jpg#center)
-
-* Des vidéos 
-  * de très nombreuses ressources sur _youtube_ comme _[la chaine de Jason Champagne](https://www.youtube.com/watch?v=HWxBtxPBCAc&list=PLrSOXFDHBtfHg8fWBd7sKPxEmahwyVBkC){:target="\_blank"}_
-  * [les pythonneries](https://www.dailymotion.com/playlist/x22t3u)
-
-* De nombreux sites comme :
-  *  [python_doctor](https://python.doctor/)
-  *  le site de _[Fabrice Sincère](http://fsincere.free.fr/isn/python/cours_python.php){:target="\_blank"}_ 
-  *  le cours d'_[OpenClassRooms](https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python){:target="\_blank"}_ 

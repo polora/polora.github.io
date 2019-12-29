@@ -66,7 +66,7 @@ message = "Hello World !"
 liste = message.split(" ")		# on sépare la chaîne à chaque espace
 print(liste)
 ```
-## JOIN : regroupement des éléments d’une liste en une chaîne de caractères
+## JOIN : regroupement des éléments d’une liste en une chaîne de caractères
  
 C’est l’inverse de _split()_ en quelque sorte.
 ```
@@ -78,6 +78,7 @@ Noter que l’on ajoute un espace. Le point correspond au + utilisé précédemm
 concaténation.
 
 D’autres méthodes qui ne seront pas détaillées par des exemples : _islower()_, _isupper()_, _istitle()_, _isalnum()_, _isalpha()_, _isdigit()_, _join()_...
+
 
 
 
