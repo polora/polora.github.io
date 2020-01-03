@@ -1,9 +1,9 @@
 ---
 layout : default
-title : Chapitre 3 - les widget Canvas et Frame
+title : Chapitre 3 - les widgets Canvas et Frame
 ---
 
-# Le widget Canevas
+# Le widget Canevas (_Canvas_)
 
 Un canevas est une _zone rectangulaire_ de la fenêtre qui pourra contenir des dessins ou d’autres figures.
 
@@ -47,11 +47,10 @@ bouton_Quitter.pack(side=BOTTOM,padx=5,pady=5)
 # exécution de la boucle principale
 maFenetre.mainloop()
 ```
-# Le widget Frame
+# Le widget Cadre (_Frame_)
 
-Il est possible de découper notre fenêtre en zones rectangulaires qui contiendront des widgets.
-
-Pour cela on utilise la classe _Frame_
+On peut découper la fenêtre en plusieurs zones rectangulaires, plusieurs cadres. On le fait en créant un objet à l'aide de la classe _Frame_.  
+Ci-dessous, le code de notre fenêtre précédente avec les différents widgets que nous venons de voir. On a placé la zone de texte dans un cadre et le bouton Quitter dans un autre cadre.
 
 ```
 # coding: utf-8
