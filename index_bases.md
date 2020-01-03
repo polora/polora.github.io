@@ -34,8 +34,8 @@ En cours de construction...
 * [Les tuples](../0_bases_2/C12_tuples)
 * [Les dictionnaires](../0_bases_2/C13_dictionnaires)
 * [Manipuler des fichiers](../0_bases_2/C14_fichiers)
-* [Gérer les erreurs en Python, les exceptions] --- A VENIR
-
+* [Gérer les erreurs en Python, les exceptions](../0_bases_2/C15_exceptions)
 
 ## Pour aller plus loin encore
 * [Utiliser une base de données MySQL avec Python]  --- A VENIR
+* [Créer des pages web avec _cherrypy_] --- A VENIR
