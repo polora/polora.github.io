@@ -6,7 +6,7 @@ title: Home
 # {{ site.title }}
 
 Cours de Python à destination des élèves du club info du collège Alfred Renoleau (ou de n'importe quel visiteur souhaitant découvrir ce langage ;-)  
-_Dernière mise à jour Décembre 2019_
+_Dernière mise à jour Janvier 2020_
 
 ## Avant de se lancer...
 

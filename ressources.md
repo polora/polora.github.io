@@ -25,6 +25,9 @@ Les ressources sont très nombreuses, quelques exemples :
 * le site de _[Fabrice Sincère](http://fsincere.free.fr/isn/python/cours_python.php){:target="\_blank"}_ 
 * le cours d'_[OpenClassRooms](https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python){:target="\_blank"}_ (inscription gratuite)
 
+## La documentation officielle en français (pour la version 3.5)
+* [https://docs.python.org/fr/3.5/](https://docs.python.org/fr/3.5/)
+
 ## Les sites officiels (en anglais !)
 * [Python](https://www.python.org/)
 * [Pygame Zero](https://pygame-zero.readthedocs.io/en/stable/)

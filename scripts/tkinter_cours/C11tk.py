@@ -1,15 +1,3 @@
----
-layout : default
-title : Chapitre 6 - cases à cocher
----
-
-# D'autres widgets à ajouter à notre fenêtre
-
-## Cases à cocher
-
-Comme tout logiciel qui permet de faire des interfaces graphiques, _tkinter_ propose plusieurs widgets pour simplifier la navigation de l'utilisateur.  
-
-```
 # coding: utf-8
 # C11tk.py - Cases à cocher
 
@@ -54,14 +42,3 @@ bouton_Quitter = Button(maFenetre,text="Quitter",command = maFenetre.destroy)
 bouton_Quitter.pack(padx=10,pady=10)
 
 maFenetre.mainloop()
-```
-
-Comprendre le programme :
-
-* 
-
-
-
-
-
-

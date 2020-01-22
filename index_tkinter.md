@@ -10,6 +10,7 @@ title: Home tkinter
 * [Créer des zones avec les widgets Canevas et Cadre](../1_tkinter/C03tk_widgets_2)
 * [Dessiner et insérer des images dans le canevas](../1_tkinter/C04tk_widgets_3)
 * [Saisie utilisateur avec Entry](../1_tkinter/C05tk_widgets_4)
+* [D'autres widgets : case à cocher,...](../1_tkinter/C06tk_widgets_5)
 
 
 
