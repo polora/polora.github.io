@@ -7,7 +7,7 @@ title : Premiers pas avec Pygame Zero
 
 Pygame est une _bibliothèque_ (un ensemble de _fonctions_ prêtes à l’emploi – plus précisément un ensemble d’objets avec leurs méthodes) qui permet de développer des animations ou des jeux en 2D (2 dimensions).
 
-Jusqu’en octobre 2018, le cours était écrit pour apprendre à utiliser Pygame directement. Mais suite à la découverte du projet Pygame Zero [(voir ici)](https://pygame-zero.readthedocs.io/en/stable/), changement de cap… on va utiliser pgzero.
+Jusqu’en octobre 2018, le cours était écrit pour apprendre à utiliser Pygame directement. Mais suite à la découverte du projet Pygame Zero [(voir ici)](https://pygame-zero.readthedocs.io/en/stable/), l'utilisation de Pygame Zero est proposée en parallèle.
 
 Pourquoi ? : Pygame Zero est, lui aussi, un ensemble d’objets et méthodes mais simplifiés et destinés au monde de l’éducation. 
 Avec ces objets simplifiés, le code a écrire est __NETTEMENT plus facile et clair__ qu’en utilisant directement Pygame.
@@ -17,9 +17,10 @@ Avec ces objets simplifiés, le code a écrire est __NETTEMENT plus facile et cl
 Avant de commencer, deux choses importantes :  
 * une animation est une suite de dessins qui défilent les uns après les autres (voir les premières animations de Mickey Mouse). Cette répétition s’appelle un __loop__.
 Dans Pygame Zero (contrairement à Pygame), il ne faut pas coder le loop, mais il faut que tu te souviennes qu’il est bien présent dans tes programmes.
-      
+  
 * pour fabriquer nos animations / jeux, nous allons superposer des surfaces (ou des calques si c'est plus simple à comprendre).
       
+
 Par exemple, on peut superposer ces 3 surfaces :
 * la fenêtre du jeu
 * l’image du décor du jeu

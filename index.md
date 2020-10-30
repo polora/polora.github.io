@@ -20,6 +20,9 @@ _Dernière mise à jour Janvier 2020_
 * [Cours dédié à l'utilisation de tkinter](index_tkinter)
 
 ## Graphismes avec Pygame / Pygame Zero
+
+- [Cours dédié à l'utilisation de Pygame](index_pygame)
+
 * [Cours dédié à l'utilisation Pygame Zero](index_pgzero)
 
 ## Ressources

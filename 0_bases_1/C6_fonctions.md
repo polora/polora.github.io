@@ -17,18 +17,18 @@ Plutôt que de le réécrire à chaque fois que tu en as besoin, tu vas le mettr
      		return resultat
  
 	### programme principal
- 	note1=input('Entre la première note : ')
- 	note2=input('Entre la deuxième note : ')
- 	note3=input('Entre la troisième note : ')
+	note1=input('Entre la première note : ')
+	note2=input('Entre la deuxième note : ')
+	note3=input('Entre la troisième note : ')
  
- 	note1=int(note1)
- 	note2=int(note2)
- 	note3=int(note3)
+	note1=int(note1)
+	note2=int(note2)
+	note3=int(note3)
  
- 	# calcul de la moyenne en utilisant la fonction
- 	moyenne=calcul_moyenne(note1,note2,note3)
- 	# affichage du résultat
- 	print("La moyenne de ces 3 notes est %f" % moyenne)
+	# calcul de la moyenne en utilisant la fonction
+	moyenne=calcul_moyenne(note1,note2,note3)
+	# affichage du résultat
+	print("La moyenne de ces 3 notes est %f" % moyenne)
 
 
 

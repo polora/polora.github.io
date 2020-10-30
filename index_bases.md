@@ -38,4 +38,3 @@ En cours de construction...
 
 ## Pour aller plus loin encore
 * [Utiliser une base de données MySQL avec Python]  --- A VENIR
-* [Créer des pages web avec _cherrypy_] --- A VENIR
