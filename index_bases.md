@@ -37,4 +37,7 @@ En cours de construction...
 * [Gérer les erreurs en Python, les exceptions](../0_bases_2/C15_exceptions)
 
 ## Pour aller plus loin encore
+* [map, filter, fonctions lambda...] --- A VENIR
 * [Utiliser une base de données MySQL avec Python]  --- A VENIR
+* [Manipuler des données avec pandas Python Data Analysis Library] --- A VENIR
+
