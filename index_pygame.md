@@ -1,15 +1,20 @@
 ---
 layout: default
-title: Home Pygame Zero
+title: Home Pygame
 ---
 
-# Graphismes avec Pygame
+# Graphismes en Python avec Pygame
 
-En cours de construction
+* [Première fenêtre avec Pygame](../3_pygame/C01pygame_premiere_fenetre)
+* [Couleurs et formes]  --- A VENIR
+* [Insérer des images] --- A VENIR
+* [Animer un objet] --- A VENIR
+* [Insérer des sons] --- A VENIR
+* [Gérer les collisions entre des rectangles] --- A VENIR
+* [Gérer les collisions entre des images] --- A VENIR
+* [Gérer les collisions avec un groupe d'objets] --- A VENIR
 
-# S'exercer avec Pygame Zero : jeu ***
 
-En cours de construction
 
 
 
