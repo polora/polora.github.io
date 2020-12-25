@@ -5,16 +5,6 @@ title: Les bases en Python
 
 # Bases de programmation en Python
 
-## S'exercer : niveau facile  
-* [exercices sur input() et les calculs](../scripts/exercices_1/C2_C3_input_calculs)
-* [exercices sur les conditions](../scripts/exercices_1/C4_conditions)
-* [exercice sur la boucle while](../scripts/exercices_1/C5_boucle_while)
-* [exercice sur la boucle for](../scripts/exercices_1/C6_boucle_for)
-* [toutes les corrections des exercices de cette section dans un dépôt (plus facile à lire)](https://github.com/polora/polora.github.io/tree/master/exercices_1/scripts)
-
-## S'exercer : niveau difficile 
-En cours de construction...
-
 ## Notions de base en Python
 
 * [Premier programme](../0_bases_1/C0_premier_programme)
@@ -27,6 +17,14 @@ En cours de construction...
 * [Les modules](../0_bases_1/C7_modules)
 * [Les chaines de caractères](../0_bases_1/C8_chaine_caracteres)
 
+## S'exercer : niveau facile  
+
+* [exercices sur input() et les calculs](../scripts/exercices_1/C2_C3_input_calculs)
+* [exercices sur les conditions](../scripts/exercices_1/C4_conditions)
+* [exercice sur la boucle while](../scripts/exercices_1/C5_boucle_while)
+* [exercice sur la boucle for](../scripts/exercices_1/C6_boucle_for)
+* [toutes les corrections des exercices de cette section dans un dépôt (plus facile à lire)](https://github.com/polora/polora.github.io/tree/master/exercices_1/scripts)
+
 ## Notions avancées en Python
 * [Objets et classes (Programmation Orientée Objet)](../0_bases_2/C9_objets_classes)
 * [Les listes](../0_bases_2/C10_listes)
@@ -36,7 +34,12 @@ En cours de construction...
 * [Manipuler des fichiers](../0_bases_2/C14_fichiers)
 * [Gérer les erreurs en Python, les exceptions](../0_bases_2/C15_exceptions)
 
+## S'exercer : niveau difficile 
+
+*En cours de construction...*
+
 ## Pour aller plus loin encore
+
 * [map, filter, fonctions lambda...] --- A VENIR
 * [Utiliser une base de données MySQL avec Python]  --- A VENIR
 * [Manipuler des données avec pandas Python Data Analysis Library] --- A VENIR
