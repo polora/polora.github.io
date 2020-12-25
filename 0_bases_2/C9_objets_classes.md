@@ -51,7 +51,7 @@ class Personnage:
         print("personnage créé")
 ```
 *  \__init__ est une fonction que l’on appelle __constructeur__ (on suit ce plan pour construire notre objet). 
-      
+   
 * cette fonction contient les attributs de l’objet (des variables) : ici son nom et son nombre de vies.
 	* certains attributs sont définis par défaut, directement (nombre de vies).
 	* certains attributs sont passés en paramètre(s) (ici, le nom du personnage) pour qu’il puisse être modifiés par la suite
@@ -73,7 +73,8 @@ Mario = Personnage("Mario")
 Luigi = Personnage("Luigi")
 
 ```
-Comprendre ce code :
+**Comprendre ce code :**
+
 * on crée 2 personnages Mario et Luigi en utilisant le modèle (la _classe_) _Personnage_.
 * les deux personnages sont créés en indiquant, en _paramètre_, le nom (comme définit dans le modèle)
 
@@ -152,9 +153,14 @@ Comprendre ce code :
 * en plus, il peut réaliser 3 actions (3 fonctions ou méthodes) : aller à droite, aller à gauche, sauter.
 (Dans notre exemple, nos méthodes ne font qu’afficher du texte. Évidemment, dans un vrai jeu, elles contrôleraient le déplacement de notre personnage !)
 	
+
 Particularité de Python (vue déjà dans le constructeur) : quand on appelle une méthode dans la classe, il faut mettre self en paramètre.
 
 A faire :
 1. Essayer ce programme.
 2. Ajouter un attribut couleur à la classe Personnage (à définir en paramètre par l’utilisateur) et modifier la création de Mario dans le programme principal pour qu’il prenne la couleur rouge
 3. Ajouter deux méthodes courir_droite() et courir_gauche() en vous inspirant des méthodes marcher.
+
+------
+
+[Chapitre suivant : les listes](./C10_listes)

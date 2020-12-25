@@ -19,7 +19,7 @@ print(mon_tuple)
      
 print(mon_tuple[1])
 ```
-## manipuler les tuples
+## Manipuler les tuples
 
 Ils se manipulent comme les listes :
 * _in_ pour rechercher un élément dans un tuple
@@ -37,7 +37,7 @@ for element in resolutions:
     print(element)
 ```
 
-## les tuples ne sont pas modifiables ? Quel intérêt alors ? 
+## Les tuples ne sont pas modifiables ? Quel intérêt alors ? 
 
 * utiliser des données qui ne peuvent pas être modifiées  
 Pour définir la taille de la fenêtre dans un jeu (largeur,hauteur) par exemple. 
@@ -53,7 +53,7 @@ print(note2)
 print(note3)
 ```
 
-## une fonction peut retourner des valeurs multiples
+## Une fonction peut retourner des valeurs multiples
 Nous ne l’avons pas vu dans le chapitre sur les fonctions mais une fonction peut renvoyer plusieurs valeurs en même temps (valeurs multiples)
 Dans ce cas, elle retournera ces valeurs sous la forme d’un tuple :
 
@@ -66,3 +66,7 @@ def utilisateur():
 
 print(utilisateur())
 ```
+
+------
+
+[Chapitre suivant : les dictionnaires](./C13_dictionnaires)

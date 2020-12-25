@@ -15,7 +15,7 @@ Exemple : notre première liste
 liste_jeux = ["Super Mario Bros","Legend of Zelda","Donkey Kong","Castlevania"]
 ```
 
-## afficher une liste ou certains de ses éléments
+## Afficher une liste ou certains de ses éléments
 
 On peut afficher chacun de ces éléments en précisant sa position (on dit sa clé ou son indice), ou plusieurs éléments de cette liste, en précisant l’indice de départ (inclus) et l’indice d’arrivée (non inclus). C’est la même chose que ce que nous avons vu avant avec les chaînes de caractères.
 
@@ -34,7 +34,7 @@ for element in liste_jeux:
     print(element)
 ```
 
-## ajouter un élément à ma liste : _append()_  ou _insert_  
+## Ajouter un élément à ma liste : _append()_  ou _insert_  
 * _append_ : une _méthode_ qui ajoute notre élément en fin de liste
 * _insert_ va nous permettre de préciser l’endroit de la liste où on veut mettre notre élément  
 
@@ -46,7 +46,7 @@ liste_jeux.insert(2, "Tetris")
 print(liste_jeux)
 ```
 
-## supprimer un élément de la liste : _del_ ou _remove()_
+## Supprimer un élément de la liste : _del_ ou _remove()_
 * _del_ : suppression d'un élément en précisant sa position
 * _remove()_ : une _méthode_ qui supprime un élément en précisant son nom
 
@@ -57,13 +57,13 @@ liste_jeux.remove("Donkey Kong")
 print(liste_jeux)
 ```
 
-## connaître le nombre d’éléments dans une liste : _len_
+## Connaître le nombre d’éléments dans une liste : _len_
 
 ```
 print(len(liste_jeux))
 ```
 
-## regrouper des listes : _extend()_
+## Regrouper des listes : _extend()_
 
 ```
 liste_PC = ["Another world (PC)", "Flashback (PC)"]
@@ -72,7 +72,7 @@ print(liste_jeux)
 ```
 On ajoute cette nouvelle liste à notre liste précédente.
 
-## rechercher un élément dans une liste : _in_ ou _index()_
+## Rechercher un élément dans une liste : _in_ ou _index()_
 
 * _in_ : recherche si l’élément est dans la liste et renvoie _True_ si oui, _False_ si non.
 * _index()_ : _méthode_ qui recherche aussi si l’élément est présent. Si oui, il retourne sa position dans la liste, sinon il retourne -1.
@@ -84,7 +84,7 @@ if "Tetris" in liste_jeux:
 print(liste_jeux.index("Tetris"))
 ```
 
-## inverser une liste : _reverse()_
+## Inverser une liste : _reverse()_
 
 _Anecdotique mais peut être utile dans certains programmes._
 
@@ -93,7 +93,7 @@ liste_jeux.reverse()
 print(liste_jeux)
 ```
 
-## trier une liste : _sort()_ et _sorted_
+## Trier une liste : _sort()_ et _sorted_
 
 * _sort()_ : une _méthode_ qui va modifier la liste
 * _sorted_ qui ne modifie pas la liste
@@ -108,9 +108,9 @@ print(liste2)				# la liste est modifiée
 ```
 Dans cet exemple, on trie des lettres pour qu’elles soient dans l’ordre croissant. On peut le faire aussi avec des nombres.
 
+------
 
-
-
+[Chapitre suivant : les chaînes de caractères 2ème partie](./C11_chaines_caracteres_2)
 
 
 

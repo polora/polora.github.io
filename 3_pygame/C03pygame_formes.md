@@ -123,7 +123,7 @@ Pour générer des objets dans notre fenêtre, nous allons utilisé le module _p
 
 Ce module comporte plusieurs **classes** qui vont nous faciliter la tâche. Les deux que nous utiliserons sont la classe _Sprite_ et la classe _Group_.
 
-###### classe Sprite
+### classe Sprite
 
 - _class Player(pygame.sprite.Sprite)_ : notre modèle Player est une classe du module _pygame.sprite_. 
 - on initialise cette classe dans le constructeur (_pygame.sprite.Sprite.\_\_init\_\_()_)
@@ -132,7 +132,7 @@ Ce module comporte plusieurs **classes** qui vont nous faciliter la tâche. Les 
 
 On crée un nouvel objet _player_ en instanciant la classe _Player_.
 
-###### classe Group
+### classe Group
 
 Elle permet de créer un objet groupe (_all\_sprites_ dans notre script) dans lequel nous mettrons tous nos objets images (le _player_ dans un premier temps).
 
@@ -143,3 +143,7 @@ Les objets groupes de _pygame.sprite_ ont des méthodes qui permettent d'appliqu
 En particulier nous utiliserons _draw_ (_all\_sprites.draw(screen)_) qui dessinent tous les sprites du groupe et _update_ (_all\_sprites.update()_) qui met à jour tous les sprites du groupe.
 
 Pour ajouter un sprite au groupe on utilise la méthode _add_ : _self.all\_sprites.add(self.player)_
+
+------
+
+[Chapitre suivant]

@@ -89,5 +89,6 @@ Essayer ce code. Ce coup-ci, le contenu du fichier n’a pas été effacé.
 
 Remarquez la présence de \n au début du texte à ajouter. Cela permet de faire un retour à la ligne. Sans ça, les phrases ou les mots seront écrits les uns derrière les autres.
 
+------
 
-
+[Chapitre suivant : Gérer les exceptions](./C15_exceptions)

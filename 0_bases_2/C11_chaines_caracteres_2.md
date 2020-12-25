@@ -3,10 +3,12 @@ layout : default
 title : Chapitre 10 - Chaines de caractères et programmation orientée objet
 ---
 
+# Les chaînes de caractères 2ème partie
+
 En plus de ressembler à un tableau à une ligne et plusieurs colonnes où chaque case est une lettre, la chaîne est aussi un objet.
 
 Les objets chaîne possèdent (comme tous les autres objets, pardi!) des méthodes prédéfinies qui leur sont associées. 
-Nous avons vu la méthode format(). Nous allons en voir d’autres.
+Nous avons vu la méthode *format()*. Nous allons en voir d’autres.
 
 ## LEN :  pour connaître le nombre de caractères dans une chaîne, autrement dit la longueur (len pour length)
 ```
@@ -15,6 +17,8 @@ longueur = len(message)
 print(longueur)
 ```
 Le message contient 13 caractères (attention, les espaces comptent comme un caractère!).
+
+*len* n'est pas vraiment une méthode associée à un objet, on ne retrouve pas la syntaxe habituelle *objet.méthode*. Mais cette fonction est très souvent utilisée, il faut la connaître.
 
 ## COUNT : compter le nombre d’occurrences dans une chaîne
 
@@ -67,7 +71,7 @@ liste = message.split(" ")		# on sépare la chaîne à chaque espace
 print(liste)
 ```
 ## JOIN : regroupement des éléments d’une liste en une chaîne de caractères
- 
+
 C’est l’inverse de _split()_ en quelque sorte.
 ```
 liste = ["Hello", "world", "!"]
@@ -79,9 +83,9 @@ concaténation.
 
 D’autres méthodes qui ne seront pas détaillées par des exemples : _islower()_, _isupper()_, _istitle()_, _isalnum()_, _isalpha()_, _isdigit()_, _join()_...
 
+------
 
-
-
+[Chapitre suivant : les tuples](./C12_tuples)
 
 
 

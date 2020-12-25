@@ -115,4 +115,6 @@ A vous de vous exercer !
 Il est possible de définir __ses propres classes d'exception__ ou __déclencher des exceptions__ (avec _raise_).  
 Se référer à la documentation officielle pour en savoir plus [https://docs.python.org/fr/2/tutorial/errors.html](https://docs.python.org/fr/2/tutorial/errors.html)
 
+------
 
+[Retour à l'accueil](../index_bases)

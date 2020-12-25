@@ -171,3 +171,5 @@ __Quoi de neuf dans ce programme ? :__
 - _keys = pygame.key.get_pressed()_ : permet de récupérer les touches sur lesquelles l'utilisateur a appuyé.
 - Lorsque l'utilisateur appuie sur une touche, on donne une valeur correspondante (positive ou négative) à la vitesse horizontale ou verticale. Et dans l'_update_, on ajoute cette vitesse à la position du personnage, ce qui provoque son déplacement.
 
+------
+

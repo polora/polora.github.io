@@ -4,9 +4,9 @@ title: Chapitre 13 - Les dictionnaires
 ---
 
 # Les dictionnaires
-Comme les listes et les tuples, le dictionnaire – dict() en Python – est une variable dans laquelle on peut stocker une collection d’éléments.
+Comme les listes et les tuples, le dictionnaire – *dict()* en Python – est une variable dans laquelle on peut stocker une collection d’éléments.
 
-Dans les listes et les tuples, on accède à l’élément en indiquant sa position – liste[0] est le premier élément de ma liste, par exemple. 
+Dans les listes et les tuples, on accède à l’élément en indiquant sa position – *liste[0]* est le premier élément de ma liste, par exemple. 
 Cette position est toujours un nombre… Pas toujours très pratique… 
 
 Et c’est là qu’arrive le dictionnaire ! Avec lui, on va pouvoir donner un nom à nos clés.
@@ -33,7 +33,7 @@ print (fiche["classe"])
 # afficher une valeur du dictionnaire
 print (fiche["classe"])
 ```
-Nous sommes d’accord : fiche["classe"] est plus clair que fiche[1]
+Nous sommes d’accord : *fiche["classe"]* est plus clair que *fiche[1]*
 
 ## Ajouter une valeur au dictionnaire
 
@@ -46,9 +46,9 @@ Quand on veut ajouter une valeur à notre dictionnaire, il faut obligatoirement 
 
 ## Supprimer une valeur du dictionnaire
 
-Deux façon de faire  : del et la méthode pop()
-* del : fonctionne comme pour les listes
-* pop : c’est une méthode
+Deux façon de faire  : *del* et la méthode *pop()*
+* *del* : fonctionne comme pour les listes
+* *pop* : c’est une méthode
 
 ```
 # supprimer une valeur du dictionnaire
@@ -81,7 +81,7 @@ print("\n### Vérification de la présence d'une clef :")
 if "nom" in fiche:
     print("OK")
 ```
-Si on utilise une clé qui n’existe pas dans le dictionnaire, on obtient une erreur (exception) de type KeyError (que l’on peut éventuellement gérer avec un try / except)
+Si on utilise une clé qui n’existe pas dans le dictionnaire, on obtient une erreur (exception) de type *KeyError* (que l’on peut éventuellement gérer avec un *try* / *except*, voir le chapitre plus loin sur les exceptions).
 
 - boucle pour afficher les clés, les valeurs ou les deux
 
@@ -102,7 +102,6 @@ for cle, valeur in fiche.items():
     print(cle, " : ", valeur)
 ```
 
+------
 
-
-
-
+[Chapitre suivant : les fichiers](./C14_fichiers)

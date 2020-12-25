@@ -3,11 +3,11 @@ layout: default
 title : Premiers pas avec Pygame
 ---
 
-# Important
+### Important
 
-A partir de ce chapitre dans le cours sur Pygame, tous les scripts utiliseront des classes (indispensable parce que la taille de nos programmes va devenir conséquente).
+A partir de ce chapitre dans le cours sur Pygame, tous les scripts utiliseront des classes (indispensable parce que la taille de nos programmes va devenir conséquente et qu'un peu d'organisation ne fera pas d mal).
 
-Il faut donc être à l'aise avec la programmation orientée objet en Python. Si ce n'est pas le cas, revoir le cours qui y est consacré sur ce site.
+Il faut donc être à l'aise avec la programmation orientée objet en Python. Si ce n'est pas le cas, revoir le cours qui y est consacré sur ce site dans les bases Python.
 
 # Première fenêtre sous forme de classe
 
@@ -112,4 +112,6 @@ Elle comporte plusieurs méthodes :
 - _draw_ : contient tout ce qui doit être "dessiné" dans la fenêtre (une fois la mise à jour faite)
 - _new_ : on mettra dans cette méthode tout ce qui doit être initialisé au début de l'animation ou du jeu. Ce contenu trouve tout aussi bien sa place dans le constructeur
 
+------
 
+[Chapitre suivant : création de formes et couleurs](./C03pygame_formes)
