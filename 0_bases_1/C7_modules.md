@@ -3,14 +3,11 @@ layout : default
 title : Chapitre 8 - les modules
 ---
 
-<<<<<<< HEAD
 # Les modules
 
 ## Un module, c’est quoi ?                                                                                                                           
 
-=======
-## Un module, c’est quoi ?                                                                                                                           
->>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
+
 _Pour comprendre ce chapitre, il faut avoir lu celui sur les fonctions._
 
 On peut créer et stocker sa fonction dans un programme. Mais si on a écrit plusieurs fonctions que l’on réutilise régulièrement, le mieux c’est de les mettre dans un fichier à part (une sorte de bibliothèque) qu’on appelle un module.
@@ -22,30 +19,19 @@ Pour cela, il faut créer un nouveau fichier _mon_module.py_ et copier à l’in
 
 Cela va ressembler à ce qui suit :
 
-<<<<<<< HEAD
-```
-## module mon_module.py
-# fonction qui calcule la moyenne de 3 notes
+	## module mon_module.py
+	# fonction qui calcule la moyenne de 3 notes
 
-def calcul_moyenne(f_note1,f_note2,f_note3) :
+	def calcul_moyenne(f_note1,f_note2,f_note3) :
  		resultat=(f_note1+f_note2+f_note3)/3
  		return resultat
-```
-=======
- 	## module mon_module.py
- 
- 	# fonction qui calcule la moyenne de 3 notes
- 	def calcul_moyenne(f_note1,f_note2,f_note3) :
-     		resultat=(f_note1+f_note2+f_note3)/3
-     		return resultat
->>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
+
+
 
 Ensuite, créons un programme qui va avoir besoin de notre fonction et qui va donc devoir faire appel à notre module :
 
  	# importe toutes les fonctions
  	from mon_module import *
-<<<<<<< HEAD
- 	 
  	# pour importer seulement une fonction
  	#from mon_module import calcul_moyenne
  	 
@@ -62,37 +48,9 @@ Ensuite, créons un programme qui va avoir besoin de notre fonction et qui va do
  	print("La moyenne de ces 3 notes est %s" % moyenne)
 
 Pour utiliser toutes les fonctions d’un module, on ajoute la ligne suivante en début de programme :
-	from mon_module import *
+*from mon_module import*
 
-
-
-Pour n’utiliser qu’une seule fonction :	
-
-=======
- 
- 	# pour importer seulement une fonction
- 	#from mon_module import calcul_moyenne
- 
- 	note1 = input('Entre la première note : ')
- 	note2 = input('Entre la deuxième note : ')
- 	note3 = input('Entre la troisième note : ')
- 
- 	note1 = int(note1)
- 	note2 = int(note2)
- 	note3 = int(note3)
- 
- 	moyenne = calcul_moyenne(note1,note2,note3)
- 
- 	print("La moyenne de ces 3 notes est %s" % moyenne)
-
-Pour utiliser toutes les fonctions d’un module, on ajoute la ligne suivante en début de programme :
-	
-	from mon_module import *
-
-Pour n’utiliser qu’une seule fonction :
-	
->>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
-	from mon_module import calcul_moyenne
+Pour n’utiliser qu’une seule fonction : *from mon_module import calcul_moyenne*
 
 ## Quelques modules bien utiles
 Il existe des modules qui sont déjà intégrés à l’installation de python sur votre ordinateur :
@@ -104,9 +62,7 @@ Il existe des modules qui sont déjà intégrés à l’installation de python s
 sans oublier _random_ que nous avons déjà utilisé.
 
 Mais aussi des modules qu’il faut installer et que nous utiliserons (_pygame_, _pygame zero_,...)
-<<<<<<< HEAD
+
+------
 
 [Chapitre suivant : les chaînes de caractères](./C8_chaine_caracteres)
-
-=======
->>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30

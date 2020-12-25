@@ -44,8 +44,7 @@ Exemple :
  print(nombre1+nombre2)
 ```
 Bien comprendre la différence mise en évidence dans cet exemple !
-<<<<<<< HEAD
+
+------
 
 [Chapitre suivant : faire des calculs](./C3_calculs)
-=======
->>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30

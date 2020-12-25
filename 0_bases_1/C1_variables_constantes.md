@@ -3,7 +3,10 @@ layout : default
 title : Chapitre 1 - Variables et constantes
 ---
 
-# Les variables                                                                                                                                          
+# Variables et constantes
+
+## Les variables                                                                                                                                          
+
 **Une partie TRÈS  importante de la leçon.**
 
 Une variable est une zone de la mémoire de l'ordinateur identifiée par une étiquette (un nom que l'on donne) et dans laquelle on stocke une valeur. Cette valeur peut être un nombre, une chaîne de caractères,…
@@ -83,7 +86,7 @@ On retrouve régulièrement deux façons de faire :
 * variable écrite en minuscules et une majuscule à chaque mot sauf le premier :  _ageUtilisateur_
 * variable en minuscules avec un underscore entre chaque mot : _age\_utilisateur_
 
-# Les constantes        
+## Les constantes        
 La valeur mise dans une constante (contrairement à celle d’une variable) __ne change pas__. 
 
 Par convention, on écrit les constantes entièrement en __majuscules__ (pour les différencier des variables).
@@ -95,8 +98,7 @@ Exemple :
  ANNEE = 1986
  print(ANNEE)
 ```
-<<<<<<< HEAD
+
+------
 
 [Chapitre suivant : dialoguer avec l'utilisateur](./C2_dialogue_avec_utilisateur)
-=======
->>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30

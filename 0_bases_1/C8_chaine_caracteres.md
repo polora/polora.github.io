@@ -3,11 +3,8 @@ layout : default
 title : Chapitre 8 - Les chaines de caracteres
 ---
 
-<<<<<<< HEAD
 # Les chaînes de caractères
 
-=======
->>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
 __Ce chapitre est très long et contient beaucoup d'informations. Il ne faut pas essayer de tout retenir mais y revenir dès que vous en aurez besoin dans les exercices et/ou les projets.__
 
 ## Rappels sur les chaînes de caractères                                                                                                                                  
@@ -113,7 +110,9 @@ __A vous maintenant de tester dans votre coin. Créez des chaînes, concaténez-
 Cette partie fait appel à des notions de Programmation Orientée Objet (POO) qu'il faut d'abord maîtriser.  
 Se reporter donc au chapitre qui y est consacré pour s'atteler ensuite à la seconde partie du cours sur les chaînes de caractères.
 
+------
 
+[Retour à l'accueil](../index_bases)
 
 
 

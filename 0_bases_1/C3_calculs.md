@@ -1,22 +1,13 @@
-<<<<<<< HEAD
 ---
 layout : default
-title : Chapitre 3 - Faire des calculs  
+title : Chapitre 3 - Faire des calculs
 ---
 
 # Faire des calculs
 
-## Les opérateurs mathématiques                                                                                                                                     
-
-=======
---- 
-layout : default
-title : Chapitre 3 - Faire des calculs  
----
-    
 
 ## Les opérateurs mathématiques                                                                                                                                     
->>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
+
 Pour faire des calculs, il faut des nombres (stockés dans nos variables) et des opérateurs que vous connaissez déjà.
 
 * le + pour une addition
@@ -48,12 +39,9 @@ print(a**b)
 * supérieur ou égal à : >=
 * inférieur ou égal à : <=
 * est égal à : ==
-* est différent de : != 
-      
-<<<<<<< HEAD
+* est différent de : !=
 
-=======
->>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
+
 Attention, ne pas confondre = (affecter une valeur à une variable) et == !
 
 3 exemples, seulement pour comprendre :
@@ -89,19 +77,13 @@ print((note>=0)and(note<=20))
 ```
 
 Le programme affiche : False (23 n’est pas entre 0 et 20)
-<<<<<<< HEAD
 
-=======
- 
->>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
-_différence avec OR_
+
 ``` 
 print((note>=0)or(note<=20))  #note supérieure à 0 OU inférieure à 20 
 ```
 Le programme affiche : True (23 n’est pas inférieur à 20 mais est supérieur à 0 donc une des conditions est valide) 
 
-<<<<<<< HEAD
-[Chapitre suivant : les conditions](./C4_conditions)
-=======
+------
 
->>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
+[Chapitre suivant : les conditions](./C4_conditions)
