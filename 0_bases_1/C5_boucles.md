@@ -3,20 +3,35 @@ layout : default
 title : Chapitre 5 - les boucles
 ---
 
+<<<<<<< HEAD
+# Les boucles
+
+=======
+>>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
 Les premiers ordinateurs ont été créés pour faire des calculs répétitifs et soulager le travail des scientifiques ou des ingénieurs.
 
 Les boucles permettent de répéter une même instruction plusieurs fois.
 
+<<<<<<< HEAD
+## La boucle While 
+=======
 ## boucle While 
+>>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
 _while_ peut se traduire par _tant que_.
 Les instructions dans le bloc qui suit while se répéteront tant que la condition est vraie.
 
 Exemple :
 
 	i=5
+<<<<<<< HEAD
+	while i>0 :
+		print(i)
+		i-=1 	       # manière abrégée d’écrire i=i-1
+=======
  	while i>0 :
  		print(i)
  		i-=1 	       # manière abrégée d’écrire i=i-1
+>>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
 
 Écrire ce programme dans l’éditeur ou l’interpréteur et l’exécuter… Que se passe-t-il ?
 
@@ -24,6 +39,20 @@ Comprendre le code :
 * tant que i est supérieur à 0, les instructions sont répétées (on affiche i et on soustrait 1 à i). 
 * Quand i prend la valeur 0 (à force d’enlever 1), la condition i>0 n’est plus respectée, on sort de la boucle while.
 
+<<<<<<< HEAD
+## La boucle For
+On utilise la boucle for quand on veut parcourir une liste de valeurs (répéter un certain nombre de fois la même action)
+
+	for i in range(1,10) :
+		print (i)
+	 
+	# est équivalent à 
+	 
+	i=1
+	while i<10 :
+		print (i)
+		i+=1
+=======
 ## boucle For
 On utilise la boucle for quand on veut parcourir une liste de valeurs (répéter un certain nombre de fois la même action)
 
@@ -36,19 +65,28 @@ On utilise la boucle for quand on veut parcourir une liste de valeurs (répéter
  	while i<10 :
  		print (i)
  		i+=1
+>>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
 
 MAIS, à la différence de while, on peut parcourir autre chose qu’une liste de nombres :
 
  	chaine="Hello world !" 
  	for lettre in chaine:
  		print (lettre)
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
 Dans ce cas, la boucle _for_ parcourt la chaîne de caractère et affiche chaque lettre une après l’autre
 
 Pour s’amuser un peu, un autre exemple à comprendre :
 
 	for i in range(0,50) :
+<<<<<<< HEAD
+		print("Je ne bavarderai plus pendant le cours d’informatique"
+=======
  		print("Je ne bavarderai plus pendant le cours d’informatique"
+>>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
 
 et hop, en 2 lignes ! Y’a plus qu’à imprimer… C’est cool d’être développeur, non ? ;-)
 
@@ -61,11 +99,19 @@ Pour interrompre une boucle for ou while, on utilise le mot-clef break.
 Exemple : 
 
 	nombre=10
+<<<<<<< HEAD
+	while nombre>0:
+	 		print(nombre)
+	 		nombre-=1		
+	 		if nombre==5:
+	    		break
+=======
  	while nombre>0:
      		print(nombre)
      		nombre-=1		
      		if nombre==5:
         		break
+>>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
 
 _nombre -=1_ est une manière plus rapide d’écrire _nombre = nombre – 1_
 
@@ -80,9 +126,15 @@ Quand on veut revenir au début de la boucle sans exécuter certaines instructio
 Exemple :
 
 	for chiffre in range(1,10):
+<<<<<<< HEAD
+	 		if (chiffre%2==0):
+	     		continue
+	 		print(chiffre)
+=======
      		if (chiffre%2==0):
          		continue
      		print(chiffre)
+>>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
 
 Comprendre le programme :
 	- on travaille sur tous les chiffres dans l’intervalle 1 à 9 avec une boucle for
@@ -92,7 +144,16 @@ Résultat : seuls les chiffres impairs s’affichent !
 
 Compris ?
 
+<<<<<<< HEAD
+## Comment choisir entre for et while ?
+Quand on sait dès le départ le nombre de répétitions à faire, on choisit for. 
+
+Si, au contraire, la répétition a lieu jusqu’à ce qu’une condition ne soit plus vraie, on utilise while.
+
+[Chapitre suivant : les fonctions](./C6_fonctions)
+=======
 ## comment choisir entre for et while
 Quand on sait dès le départ le nombre de répétitions à faire, on choisit for. 
 
 Si, au contraire, la répétition a lieu jusqu’à ce qu’une condition ne soit plus vraie, on utilise while.
+>>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30

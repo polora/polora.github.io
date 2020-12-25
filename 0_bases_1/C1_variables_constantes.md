@@ -95,3 +95,8 @@ Exemple :
  ANNEE = 1986
  print(ANNEE)
 ```
+<<<<<<< HEAD
+
+[Chapitre suivant : dialoguer avec l'utilisateur](./C2_dialogue_avec_utilisateur)
+=======
+>>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30

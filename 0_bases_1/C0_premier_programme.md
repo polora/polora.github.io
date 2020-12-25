@@ -13,7 +13,11 @@ L'environnement de développpement _pyzo_ comporte deux zones distinctes :
 
 ![capture écran Pyzo](../images/IDE_pyzo.jpg#center)
 
+<<<<<<< HEAD
+​                                                                         _Capture d'écran dans Pyzo_
+=======
 
+>>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
 
 1. Ecrire son programme (ou _script_) dans l'éditeur
 
@@ -52,6 +56,11 @@ Il affiche (à l’aide de la commande _print_) deux phrases à l’écran. En i
 
 Pour écrire des programmes un peu plus complexes, il va falloir que nous mettions un pied dans le monde des variables… rendez-vous dans le prochain chapitre !
 
+<<<<<<< HEAD
+[Chapitre suivant : les variables](./C1_variables_constantes)
+
+=======
+>>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
 
 
 

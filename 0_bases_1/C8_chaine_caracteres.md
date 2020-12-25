@@ -3,6 +3,11 @@ layout : default
 title : Chapitre 8 - Les chaines de caracteres
 ---
 
+<<<<<<< HEAD
+# Les chaînes de caractères
+
+=======
+>>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
 __Ce chapitre est très long et contient beaucoup d'informations. Il ne faut pas essayer de tout retenir mais y revenir dès que vous en aurez besoin dans les exercices et/ou les projets.__
 
 ## Rappels sur les chaînes de caractères                                                                                                                                  

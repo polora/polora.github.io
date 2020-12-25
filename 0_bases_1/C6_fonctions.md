@@ -3,7 +3,14 @@ layout : default
 title : Chapitre 6 - Les fonctions
 ---
 
+<<<<<<< HEAD
+# Les fonctions
+
 ## A quoi sert une fonction ?                                                                                                                           
+
+=======
+## A quoi sert une fonction ?                                                                                                                           
+>>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
 Une fonction, c’est un bout de programme réutilisable.
 
 Par exemple, tu as écrit un programme qui permet de calculer la moyenne de plusieurs notes. 
@@ -12,19 +19,34 @@ Plutôt que de le réécrire à chaque fois que tu en as besoin, tu vas le mettr
 ## Créer une fonction et l’utiliser
 
 	# création de la fonction
+<<<<<<< HEAD
+	def calcul_moyenne(f_note1,f_note2,f_note3) :
+	 		resultat=(f_note1+f_note2+f_note3)/3
+	 		return resultat
+	 
+=======
  	def calcul_moyenne(f_note1,f_note2,f_note3) :
      		resultat=(f_note1+f_note2+f_note3)/3
      		return resultat
  
+>>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
 	### programme principal
 	note1=input('Entre la première note : ')
 	note2=input('Entre la deuxième note : ')
 	note3=input('Entre la troisième note : ')
+<<<<<<< HEAD
+	 
+	note1=int(note1)
+	note2=int(note2)
+	note3=int(note3)
+	 
+=======
  
 	note1=int(note1)
 	note2=int(note2)
 	note3=int(note3)
  
+>>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
 	# calcul de la moyenne en utilisant la fonction
 	moyenne=calcul_moyenne(note1,note2,note3)
 	# affichage du résultat
@@ -53,3 +75,8 @@ Dans le programme précédent, expliquons la différence entre les variables f_n
 
 _On parle de portée de la variable._
 Garde ce point en mémoire, tu y seras souvent confronté. Particulièrement quand tu veux modifier une variable globale dans une fonction.
+<<<<<<< HEAD
+
+[Chapitre suivant : les modules](./C7_modules)
+=======
+>>>>>>> 4c041562b0ad05125e73077d9d7ffc5938d87d30
