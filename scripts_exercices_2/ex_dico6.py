@@ -3,6 +3,8 @@
 # @author : YF
 # @date : octobre 2022
 
+### Correction de l'exercice - retourner un résultat sous forme de dictionnaire
+
 from random import randint
 
 # création de la liste de 10 chiffres pris au hasard entre 1 et 5

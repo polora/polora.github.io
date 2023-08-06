@@ -1,6 +1,10 @@
-#coding:utf-8
+#!/usr/bin/env python3  
+# -*- coding: utf-8 -*- 
 
-### Chapitre 3 - correction de l'exercice 2 - nombre positif, négatif ou nul ?
+# @author : YF
+# @date : octobre 2022
+
+### Correction de l'exercice - nombre positif, négatif ou nul ?
 
 nombre = input("Saisir un nombre : ")
 nombre = int(nombre)

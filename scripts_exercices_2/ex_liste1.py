@@ -1,6 +1,10 @@
-# coding:utf-8
+#!/usr/bin/env python3  
+# -*- coding: utf-8 -*- 
 
-### Exercices de niveau 2 : correction de l'exercice 1 sur les listes
+# @author : YF
+# @date : octobre 2022
+
+### Correction de l'exercice 1 sur les listes - parcourir une liste
 
 # déclaration de la liste
 jeux_NES = ["Super Mario Bros", "Tetris", "Kirby's Adventure ", "Legend of Zelda", "Dragon Quest", "Metroid"]

@@ -3,6 +3,8 @@
 # @author : YF
 # @date : octobre 2022
 
+### Correction de l'exercice - manipuler les valeurs d'un dictionnaire
+
 carnet_notes = {
 	"Alain": [12, 15 , 17], 
 	"Nathalie" : [15, 19 , 16], 

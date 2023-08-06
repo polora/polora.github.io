@@ -1,6 +1,10 @@
-#coding:utf-8
+#!/usr/bin/env python3  
+# -*- coding: utf-8 -*- 
 
-### Chapitre 3 - Correction de l'exercice 3 : trouver le nombre mystère
+# @author : YF
+# @date : octobre 2022
+
+### Correction de l'exercice - trouver le nombre mystère
 
 # améliorations à apporter :
 #   - vérifier que le nombre saisi est bien compris entre 1 et 50

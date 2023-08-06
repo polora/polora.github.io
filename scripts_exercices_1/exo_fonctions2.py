@@ -3,6 +3,8 @@
 # @author : YF
 # @date : octobre 2022
 
+### Correction de l'exercice - calculer le carré et le cube d'un nombre
+
 # fonction carre_cube
 # - prend en paramètre un nombre entier
 # - retourne le carré et le cube du nombre

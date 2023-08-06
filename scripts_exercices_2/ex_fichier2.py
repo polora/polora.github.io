@@ -3,6 +3,8 @@
 # @author : YF
 # @date : octobre 2022
 
+### Correction de l'exercice - ajouter du contenu dans un fichier
+
 # ouverture du fichier de l'exercie 1 et ajout d'une autre ligne
 with open("monFichier.txt","a") as fichier:
     fichier.write("\nPar moi, apprenti développeur")

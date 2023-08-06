@@ -1,6 +1,10 @@
-#coding:utf-8
+#!/usr/bin/env python3  
+# -*- coding: utf-8 -*- 
 
-### Chapitre 3 - correction de l'exercice 1 - nombre pair ou impair ?
+# @author : YF
+# @date : octobre 2022
+
+### Correction de l'exercice - nombre pair ou impair ?
 
 nombre=input("Saisir un nombre : ")
 nombre=int(nombre)

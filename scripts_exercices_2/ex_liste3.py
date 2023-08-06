@@ -1,6 +1,10 @@
-# coding:utf-8
+#!/usr/bin/env python3  
+# -*- coding: utf-8 -*- 
 
-### Exercices de niveau 2 : correction de l'exercice 3 sur les listes
+# @author : YF
+# @date : octobre 2022
+
+### Correction de l'exercice 3 sur les listes - trouver le minimum dans une liste
 
 # Déclaration de la liste
 MaListe = [9,19,23,8,10,31,2,13]

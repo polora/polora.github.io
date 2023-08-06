@@ -1,6 +1,10 @@
-#coding:utf-8
+#!/usr/bin/env python3  
+# -*- coding: utf-8 -*- 
 
-### Chapitre 4 : correction de l'exercice 1 - Table de multiplication
+# @author : YF
+# @date : octobre 2022
+
+### Correction de l'exercice - Table de multiplication
 
 def multiplication(nombre_a_multiplier):
     for i in range(1,10):

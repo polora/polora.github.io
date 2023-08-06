@@ -1,6 +1,10 @@
-#coding:utf-8
+#!/usr/bin/env python3  
+# -*- coding: utf-8 -*- 
 
-### Chapitre 4 - correction de l'exercice 2 - créer son propre module de Maths
+# @author : YF
+# @date : octobre 2022
+
+### Correction de l'exercice - créer son propre module de Maths
 
 
 """

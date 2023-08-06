@@ -3,6 +3,8 @@
 # @author : YF
 # @date : octobre 2022
 
+### Correction de l'exercice - manipulations sur un dictionnaire - niveau intermédiaire
+
 moyennes_T1 = {
 	"Célestine" : 11,"Cédric" : 10,"Farida" : 16,"Zélie" : 12,"Fatoumata" : 15,
 	"Colombin" : 19,"Ophélie" : 12,"Gauvin" : 9,"Rodolphe" : 11,"Ariel" : 16,

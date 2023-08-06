@@ -3,6 +3,8 @@
 # @author : YF
 # @date : octobre 2022
 
+### Correction de l'exercice - gérer un parc automobile
+
 # création de la classe voiture
 class Voiture():
     # attributs de cette classe : la marque, la couleur et l'immatriculation

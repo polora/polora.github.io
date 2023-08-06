@@ -3,6 +3,8 @@
 # @author : YF
 # @date : octobre 2022
 
+### Correction l'exercice - créer un dictionnaire de mots liés à l'informatique
+
 dictionnaire = {
     "clavier" : "keyboard",
     "écran" : "screen",

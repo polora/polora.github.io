@@ -1,6 +1,10 @@
-#coding:utf-8
+#!/usr/bin/env python3  
+# -*- coding: utf-8 -*- 
 
-### Chapitre 4 - correction de l'exercice 2 - programme qui utilise notre module de Maths
+# @author : YF
+# @date : octobre 2022
+
+### Correction de l'exercice - programme qui utilise notre module de Maths
 
 from ex7_mon_module_math import *
 

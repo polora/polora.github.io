@@ -1,6 +1,10 @@
-#coding:utf-8
+#!/usr/bin/env python3  
+# -*- coding: utf-8 -*- 
 
-### Chapitre 3 - correction de l'exercice 4 - jouons aux dés ! un exemple d'utilisation de la boucle for
+# @author : YF
+# @date : octobre 2022
+
+### Correction de l'exercice - jouons aux dés ! un exemple d'utilisation de la boucle for
 
 from random import randint
 

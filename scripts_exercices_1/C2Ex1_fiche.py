@@ -1,6 +1,10 @@
-# coding:utf-8
+#!/usr/bin/env python3  
+# -*- coding: utf-8 -*- 
 
-### Chapitre 2 correction de l'exercice 1 - fiche identité
+# @author : YF
+# @date : octobre 2022
+
+### Correction de l'exercice 1 - fiche identité
 
 # déclaration des variables et initialisation
 nom=""

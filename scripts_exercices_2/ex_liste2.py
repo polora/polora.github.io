@@ -1,6 +1,10 @@
-# coding:utf-8
+#!/usr/bin/env python3  
+# -*- coding: utf-8 -*- 
 
-### Exercices de niveau 2 : correction de l'exercice 2 sur les listes
+# @author : YF
+# @date : octobre 2022
+
+### Correction de l'exercice 2 sur les listes - manipuler une liste, inverser les valeurs
 
 
 # déclaration de la liste

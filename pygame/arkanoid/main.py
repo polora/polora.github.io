@@ -3,6 +3,11 @@
 # @author : YF
 # @date : février 2023
 
+# améliorations à apporter
+# - écran accueil et écran de sortie
+# - accélération de la balle au cours du jeu
+# - plusieurs niveaux
+
 import pygame
 
 WIDTH,HEIGHT = 800,600
@@ -103,7 +108,7 @@ class Paddle(pygame.sprite.Sprite):
 
 class Ball(pygame.sprite.Sprite):
 
-    def __init__(self,x,y):pass
+    def __init__(self,x,y):
         super().__init__()
         self.image = pygame.Surface((10,10))
         self.rect = self.image.get_rect()

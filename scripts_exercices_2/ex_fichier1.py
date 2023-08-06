@@ -2,6 +2,10 @@
 # -*- coding: utf-8 -*- 
 # @author : YF
 # @date : octobre 2022
+
+### Correction de l'exercice - créer et lire un fichier
+
+
 '''
 Ecrire un programme qui réalise les choses suivantes :
 * crée, s'il n'existe pas déjà, un fichier _monFichier.txt_

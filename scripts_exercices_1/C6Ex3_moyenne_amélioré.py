@@ -1,9 +1,13 @@
-#coding:utf-8
+#!/usr/bin/env python3  
+# -*- coding: utf-8 -*- 
 
-### Chapitre 3 - CORRECTION DE L'EXERCICE 5 - Calcul d'une moyenne de 3 notes - version améliorée
+# @author : YF
+# @date : octobre 2022
+
+### Correction de l'exercice - Calcul d'une moyenne de 3 notes - version améliorée
 
 # déclaration des variables et initiation
-note=0
+
 nb_notes=0
 somme=0
 moyenne=0

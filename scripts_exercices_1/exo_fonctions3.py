@@ -3,6 +3,8 @@
 # @author : YF
 # @date : octobre 2022
 
+### Correction de l'exercice - calcul d'une somme
+
 # fonction somme :
 # - prend en paramètre un tuple de longueur variable
 # - renvoie la somme des éléments de ce tuple 

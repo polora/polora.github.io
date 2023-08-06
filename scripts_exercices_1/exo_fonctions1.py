@@ -3,6 +3,8 @@
 # @author : YF
 # @date : octobre 2022
 
+### Correction de l'exercice - compter le nombre de mots dans une phrase
+
 maPhrase = input("Saisir une phrase : ")
 
 def compteMots(phrase):

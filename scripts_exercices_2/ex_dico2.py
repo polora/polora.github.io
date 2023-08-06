@@ -3,6 +3,8 @@
 # @author : YF
 # @date : octobre 2022
 
+### Correction de l'exercice  - manipulations sur les dictionnaires - niveau facile
+
 monPC = {
     "device": "Laptop", 
     "constructeur": "DELL", 

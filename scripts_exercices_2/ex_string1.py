@@ -3,6 +3,7 @@
 # @author : YF
 # @date : octobre 2022
 
+### Correction de l'exercice - utiliser les différentes méthodes associées à l'objet chaîne de caractères
 
 message = "Bienvenue au club info !"
 
