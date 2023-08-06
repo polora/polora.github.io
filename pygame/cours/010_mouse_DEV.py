@@ -1,4 +1,0 @@
-'''
-En cours de développement
-
-'''
