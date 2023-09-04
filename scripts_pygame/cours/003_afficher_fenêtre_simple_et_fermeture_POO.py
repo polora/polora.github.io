@@ -3,34 +3,30 @@
 
 """
 ETAPE 3 : 
-Modification de la version précédente (ouverture, fermeture d'une fenêtre) en créant des classes
-(programmation orientée objet)
+Modification de la version précédente (ouverture, fermeture d'une fenêtre) en créant une classe
+(programmation orientée objet) appelée Game.
 
-Quelques nouveautés :
-    - on définit une horloge (Clock) qui va déterminer la vitesse de rafraîchissement de notre 
-    fenêtre
-    - on introduit un état playing (pour définir l'état du jeu) en plus de running (état de la
-    fenêtre : le jeu peut être fini et la fenêtre rester ouverte)
+Et une nouveauté :
+    - on définit une horloge (clock) qui va déterminer la vitesse de rafraîchissement de notre 
+    fenêtre.
 
 @author : YF
+Dernière mise à jour : juillet 2023
 
-Dernière mise à jour : sept 2022
-
-Etat : à vérifier
 """
 
 import pygame
 
-# Taille et titre de la fenêtre / Frames par seconde 
-SCREENSIZE = (800, 600)
-TITLE = "Tuto Pygame"
+### constantes
+# taille et titre de la fenêtre
+TAILLE_FENETRE = LARGEUR, HAUTEUR = 800, 600  # (LARGEUR, HAUTEUR) de la fenêtre (en pixels)
+TITRE = "Tutoriel Pygame"                     # Titre qui s'affiche dans la fenêtre
+# couleurs
+GRIS = 'darkgray'                             # constante définissant le GRIS
+COULEUR_FOND = GRIS                           # couleur de fond
+
 # Frames par secondes (taux de rafaîchissement de la fenêtre)
 FPS = 60
- 
-# Définition des couleurs et de la couleur de fond
-LIGHTGREY = (110,110,110)
-YELLOW = (255,255,0)
-BGCOLOR = LIGHTGREY
 
 class Game(object):
     
@@ -38,8 +34,8 @@ class Game(object):
     def __init__(self):
         pygame.init()
         # création de la fenêtre
-        self.screen = pygame.display.set_mode(SCREENSIZE)
-        pygame.display.set_caption(TITLE)
+        self.window = pygame.display.set_mode((TAILLE_FENETRE))
+        pygame.display.set_caption(TITRE)
         # horloge qui détermine le rafraîchissement de la fenêtre
         self.clock = pygame.time.Clock()
         # état de la fenêtre (ouverte ou pas)
@@ -47,45 +43,40 @@ class Game(object):
     
     # méthode permettant de fermer la fenêtre
     def closeWindow(self):
-        if self.playing:
-            self.playing = False
         self.running = False
         
     # méthode de gestion de la saisie au clavier (pour l'instant seulement fin du jeu)
-    def events(self):
+    def keyboardEvents(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:         # croix de la fenêtre
                 self.closeWindow()
-            if event.type == pygame.KEYDOWN:
+            if event.type == pygame.KEYDOWN:      # détection d'une touche enfoncée
                 if event.key == pygame.K_ESCAPE:  # touche Echap  
                     self.closeWindow()
                     
-    # méthode qui met à jour tous les sprites du groupe
+    # méthode qui met à jour tous les dessins sur l'écran
     def update(self):
-        # mise à jour de tous les sprites du groupe all_sprites
-        self.all_sprites.update()
+        pygame.display.update()
    
-    # méthode qui contient tout ce qui doit apparaître dans la fenêtre et la rafraîchit
+    # méthode qui contient tout ce qui doit apparaître dans la fenêtre 
     def draw(self):
         # couleur de fond d'écran
-        self.screen.fill(BGCOLOR)
-        # mise à jour de l'écran
-        pygame.display.update()
+        self.window.fill(COULEUR_FOND)
         
     # méthode qui regroupe tous les évènements de la boucle de jeu ou d'animation
     def run(self):
         # état du jeu (différent de l'état de la fenêtre : le jeu peut être fini mais 
         # la fenêtre encore ouverte)
-        self.playing = True
-        while self.playing:
-            self.events()
+        while self.running:
+            self.keyboardEvents()
             self.update()
             self.draw()
             # on définit un rafraîchissement = FPS
             self.clock.tick(FPS)
 
-# programme principal
+### programme principal
+# instanciation
 game = Game()
-while game.running:
-    game.run()
+# appel à la méthode run de notre objet
+game.run()
 pygame.quit()

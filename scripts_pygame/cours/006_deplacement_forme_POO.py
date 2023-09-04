@@ -2,31 +2,39 @@
 # -*- coding: utf-8 -*-
 
 """
-ETAPE 5
+ETAPE 6
     - dans cette nouvelle version, un sprite (une forme ou, plus tard, un personnage) 
-    peut être déplacée à l'aide des flèches du clavier
+    peut être déplacé à l'aide des flèches du clavier
 
 @author: YF
 
-Dernière mise à jour : sept 2022
+Dernière mise à jour : juillet 2023
+
 
 """
 import pygame
 
-# Taille et titre de la fenêtre / Frames par seconde 
-SCREENSIZE = (800, 600)
-TITLE = "Tuto Pygame"
-FPS = 60
-# Taille des sprites en pixels
-TILESIZE = 32
-# Vitesse de déplacement du personnage
-PLAYER_VEL = 10
+import pygame
 
-# Définition des couleurs et de la couleur de fond
-DARKGREY = (40,40,40)
-LIGHTGREY = (110,110,110)
-YELLOW = (255,255,0)
-BGCOLOR = LIGHTGREY
+### constantes
+# taille et titre de la fenêtre
+TAILLE_FENETRE = LARGEUR, HAUTEUR = 800, 600  # (LARGEUR, HAUTEUR) de la fenêtre (en pixels)
+TITRE = "Tutoriel Pygame"                     # Titre qui s'affiche dans la fenêtre
+# couleurs
+GRIS = 'darkgray'                             
+GRIS_CLAIR = 'gray'
+ROUGE = 'red'                                
+
+IMAGE_FOND = pygame.image.load('./assets/background.png')
+
+# Frames par secondes (taux de rafaîchissement de la fenêtre)
+FPS = 60
+
+# Taille des sprites en pixels
+TAILLE_SPRITE = 32
+# Vitesse de déplacement du personnage
+VITESSE_SPRITE = 10
+
 
 class Player(pygame.sprite.Sprite):
     """
@@ -39,8 +47,8 @@ class Player(pygame.sprite.Sprite):
         # initialisation de la classe Sprite du module pygame.sprite
         super().__init__()
         # notre personnage est une Surface qui a pour dimensions TILESIZE x TILESIZE
-        self.image = pygame.Surface((TILESIZE,TILESIZE))
-        self.image.fill(YELLOW)
+        self.image = pygame.Surface((TAILLE_SPRITE,TAILLE_SPRITE))
+        self.image.fill(ROUGE)
         # récupère les dimensions du rectangle entourant l'image (x,y,largeur,hauteur)
         self.rect = self.image.get_rect()
         # on place l'image en x,y passés en paramètres au constructeur
@@ -49,23 +57,29 @@ class Player(pygame.sprite.Sprite):
 
     def move(self, direction):
         # déplacement du personnage en fonction de la direction passée en paramètre
+        # (right, left, down, up) en ajoutant VITESSE_SPRITE à la position du
+        # rectangle
+
         # si la forme atteint les bords de l'écran, le déplacement est stoppé
-        if direction == "R" and self.rect.right < SCREENSIZE[0]:
-            self.rect.x += PLAYER_VEL
-        elif direction == "L" and self.rect.left > 0:
-            self.rect.x -= PLAYER_VEL
-        elif direction == "D" and self.rect.bottom < SCREENSIZE[1]:
-            self.rect.y += PLAYER_VEL
-        elif direction == "U" and self.rect.top > 0:
-            self.rect.y -= PLAYER_VEL 
+        # on repère les bords du rectangle (self.rect) en fonction de ses côtés :
+        # right : côté droit, lefr : côté gauche
+        # bottom : côté bas, top : côté haut
+        if direction == 'right' and self.rect.right < LARGEUR:
+            self.rect.x += VITESSE_SPRITE
+        elif direction == 'left' and self.rect.left > 0:
+            self.rect.x -= VITESSE_SPRITE
+        elif direction == "down" and self.rect.bottom < HAUTEUR:
+            self.rect.y += VITESSE_SPRITE
+        elif direction == "up" and self.rect.top > 0:
+            self.rect.y -= VITESSE_SPRITE
 
 class Game(object):
     
     # Constructeur de la classe  
     def __init__(self):
         pygame.init()
-        self.screen = pygame.display.set_mode(SCREENSIZE)
-        pygame.display.set_caption(TITLE)
+        self.window = pygame.display.set_mode(TAILLE_FENETRE)
+        pygame.display.set_caption(TITRE)
         self.clock = pygame.time.Clock()
         self.running = True
     
@@ -76,7 +90,7 @@ class Game(object):
         self.running = False
         
     # méthode de gestion de la saisie au clavier (pour l'instant seulement fin du jeu)
-    def events(self):
+    def keyboardEvents(self):
         # récupération des touches qui sont "enfoncées"
         keys = pygame.key.get_pressed()
 
@@ -89,13 +103,13 @@ class Game(object):
             self.closeWindow()
         # déplacement du joueur avec les flèches
         elif keys[pygame.K_RIGHT]:
-            self.player.move("R")
+            self.player.move('right')
         elif keys[pygame.K_LEFT]:
-            self.player.move("L")
+            self.player.move('left')
         elif keys[pygame.K_DOWN]:
-            self.player.move("D")
+            self.player.move('down')
         elif keys[pygame.K_UP]:
-            self.player.move("U") 
+            self.player.move('up') 
 
     # méthode qui met à jour tous les sprites du groupe
     def update(self):
@@ -105,16 +119,16 @@ class Game(object):
     # méthode qui contient tout ce qui doit apparaître dans la fenêtre et la rafraîchit
     def draw(self):
         # couleur de fond d'écran
-        self.screen.fill(BGCOLOR)
+        self.window.blit(IMAGE_FOND,(0,0))
         # on dessine tous les sprites du groupe all_sprites dans la fenêtre
-        self.all_sprites.draw(self.screen)
+        self.all_sprites.draw(self.window)
         pygame.display.update()
         
     # méthode qui regroupe tous les évènements de la boucle de jeu ou d'animation
     def run(self):
         self.playing = True
         while self.playing:
-            self.events()
+            self.keyboardEvents()
             self.update()
             self.draw()
             self.clock.tick(FPS)
@@ -124,8 +138,7 @@ class Game(object):
         self.all_sprites = pygame.sprite.Group()
         # instanciation pour créer un personnage à partir de la classe Player
         # positionné au milieu de l'écran
-        # SCREENSIZE[0] = largeur / SCREENSIZE[1] = hauteur
-        self.player = Player(SCREENSIZE[0] / 2, SCREENSIZE[1] / 2)
+        self.player = Player(LARGEUR / 2, HAUTEUR / 2)
         # on ajoute notre objet player au groupe de sprites all_sprites
         self.all_sprites.add(self.player)
         

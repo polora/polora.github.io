@@ -2,15 +2,11 @@
 # -*- coding: utf-8 -*-
 
 """
-ETAPE 4 : 
+ETAPE 5 : 
 Programmation toujours avec des classes
 
 Quoi de neuf ? :
-    - Créer un sprite (une forme / un personnage)  (pour l'instant un carré)
-	- Créer un groupe de sprites et ajout du personnage à ce groupe
-    - Distinction entre la fin du jeu/animation (playing) et l'ouverture/fermeture de la 
-fenêtre. La fenêtre peut rester ouverte même une fois le jeu terminé. Ce sera utile plus
-tard...
+    - insertion d'une image pour remplacer le fond d'écran
 
 @author: YF 
 Dernière mise à jour : juillet 2023
@@ -26,7 +22,8 @@ TITRE = "Tutoriel Pygame"                     # Titre qui s'affiche dans la fen
 # couleurs
 GRIS = 'darkgray'                             # constante définissant le GRIS
 ROUGE = 'red'                                 # idem pour le red
-COULEUR_FOND = GRIS                           # couleur de fond
+
+IMAGE_FOND = pygame.image.load('./assets/background.png')
 
 # Frames par secondes (taux de rafaîchissement de la fenêtre)
 FPS = 60
@@ -88,8 +85,9 @@ class Game(object):
    
     # méthode qui contient tout ce qui doit apparaître dans la fenêtre et la rafraîchit
     def draw(self):
-        # couleur de fond d'écran
-        self.window.fill(COULEUR_FOND)
+        # on remplace la couleur de fond par une image
+        # blit permet de "coller" l'image IMAGE_FOND à la position (0,0)
+        self.window.blit(IMAGE_FOND,(0,0))
         # on dessine tous les sprites du groupe all_sprites dans la fenêtre
         self.all_sprites.draw(self.window)
         pygame.display.update()

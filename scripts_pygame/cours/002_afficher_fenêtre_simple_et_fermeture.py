@@ -6,40 +6,41 @@ ETAPE 2 :
 On reprend la version précédente qui affiche la fenêtre graphique 
 On ajoute la gestion des évènements du clavier pour déclencher la fermeture de la fenêtre
 
-Author : YF
-Dernière mise à jour : sept 2022
+@author : YF
+Dernière mise à jour : juillet 2023
 
-Etat : à vérifier (cohérence par rapport à la suite)
 """
 
 import pygame
 
-# constantes
-SCREENSIZE = (800,600)          # (LARGEUR, HAUTEUR) de la fenêtre (en pixels)
-LIGHTGREY = (110,110,110)       # couleur GRIS CLAIR
-YELLOW = (240,255,0)            # couleur JAUNE
-BGCOLOR = LIGHTGREY             # couleur de fond
-TITLE = "Tutoriel Pygame"       # Titre qui s'affiche dans la fenêtre
+### constantes
+# taille et titre de la fenêtre
+TAILLE_FENETRE = LARGEUR, HAUTEUR = 800, 600  # (LARGEUR, HAUTEUR) de la fenêtre (en pixels)
+TITRE = "Tutoriel Pygame"                     # Titre qui s'affiche dans la fenêtre
+# couleurs
+GRIS = 'darkgray'                             # constante définissant le GRIS
+COULEUR_FOND = GRIS                           # couleur de fond
 
+# initialisation de pygame
 pygame.init()
 
 # création de la fenêtre principale
-screen = pygame.display.set_mode(SCREENSIZE)
-pygame.display.set_caption(TITLE)
+window = pygame.display.set_mode((TAILLE_FENETRE))
+pygame.display.set_caption(TITRE)
 
 #  boucle principale
 ## variable qui détermine l'état de la boucle : True = la boucle est active, la fenêtre s'affiche
 running = True
 
-# tant que running est vraie
+# tant que continuer est vraie
 while running:
 
     # remplir la fenêtre avec une couleur
-    screen.fill(BGCOLOR)
+    window.fill(COULEUR_FOND)
 
     # événement fermeture de la fenêtre
     for event in pygame.event.get():
-        if event.type == pygame.QUIT:
+        if event.type == pygame.QUIT:  # pygame.QUIT : on clique sur la fermeture de la fenêtre
             running = False
     
     # rafraîchir la fenêtre
