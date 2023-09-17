@@ -1,97 +1,149 @@
 #!/usr/bin/env python3  
-# -*- coding: utf-8 -*- 
+#-*- coding: utf-8 -*-
+#
+#
+# @author : YF
+# @date : septembre 2023
 
 '''
-@author :  YF
-@date : septembre 2023
-
 - récupération de la liste des élèves au format CSV depuis Pronote
-- recherche du nombre de lignes (donc d'élèves) dans cette liste (penser à supprimer les lignes vides)
-- fonction de création d'un mot de passe aléatoire
-- module csv de python ne permet pas d'ajouter une colonne : donc on fusionne avec les mots de passe aléatoires que l'on va fusionner avec la liste élèves
+IMPORTANT : renommmer ce fichier en data.csv ou remplacer data.csv dans ce script par le nom
+souhaité
 
-Améliorations à apporter :
-- fonction qui supprime les lignes vides
+- recherche du nombre de lignes (donc d'élèves) dans cette liste
+- les lignes vides seront supprimées
+- fonction de création d'un mot de passe aléatoire
+- vérification de l'absence de doublons dans ces mots de passe
+- module csv de python ne permet pas d'ajouter une colonne : donc on crée une liste intermédiaire
+qui permettra de fusionner les données élèves et les mots de passe aléatoires 
 
 '''
 
+import string
 import random
 import csv
 
-### fonctions
 
-# fonction qui ouvre le fichier CSV de la liste d'élèves, compte puis
-# renvoie le nombre de lignes
-def return_nombre_eleves(fichier):
+'''
+Fonction qui crée un mot de passe suivant certaines conditions
+Ici, conditions = 8 caractères, 4 minuscules, 2 majuscules, 2 chiffres
+'''
+def creation_mot_de_passe():
+    # création des listes : majuscules, minuscules, chiffres
+    majuscules = list(string.ascii_uppercase)
+    minuscules = list(string.ascii_lowercase)
+    chiffres = list(string.digits)
+
+    # retrait des caractères pouvant porter à confusion
+    majuscules.remove('O')
+    minuscules.remove('i')
+    minuscules.remove('l')
+    chiffres.remove('0')
+
+    # définition de la structure du mot de passe
+    nombre_minuscules = 4
+    nombre_majuscules = 2
+    nombre_chiffres = 2
+
+    # construction de la liste des caractères du mot de passe
+    password_temp = []
+    for i in range(nombre_minuscules):
+        password_temp.append(random.choice(minuscules))
+    for i in range(nombre_majuscules):
+        password_temp.append(random.choice(majuscules))
+    for i in range(nombre_chiffres):
+        password_temp.append(random.choice(chiffres))
+
+    # mélange des caractères du mot de passe   
+    #random.shuffle(password_list) 
+
+    # concaténation de la liste pour obtenir le mot de passe
+    password = ''.join(password_temp)
+
+    return password
+
+'''
+Fonction qui crée une liste de mots de passe 
+size : paramètre déterminant le nombre de mots de passe dans la liste
+renvoie la liste de mots de passe
+'''
+def creation_liste_mots_de_passe(nombre_de_mots_de_passe):
+    passwords_list = []
+    for i in range(nombre_de_mots_de_passe):
+        passwords_list.append(creation_mot_de_passe())
+    return passwords_list
+
+'''
+Fonction qui recherche des doublons dans la liste pour éviter que deux utilisateurs aient 
+le même mot de passe
+Renvoie True si un doublon a été trouvé, False sinon
+'''
+def recherche_doublons(liste):
+    for element in liste:
+        if liste.count(element) > 1:
+            return True
+    return False
+
+'''
+Fonction qui ouvre le fichier CSV de la liste d'élèves, compte le nombre de lignes (en 
+ne tenant pas compte des lignes vides)
+Renvoie le nombre de lignes
+'''
+def nombre_eleves_dans_fichier_csv(fichier):
     # Lire le fichier avec reader de csv
     nb_eleves = 0
     with open(fichier, 'r') as fichiercsv:
         reader = csv.reader(fichiercsv , delimiter=',')
         for row in reader:
-            nb_eleves += 1
+            if any(row):    # vérification que la ligne n'est pas vide
+                nb_eleves += 1
     fichiercsv.close()
     return nb_eleves
 
-# fonction qui crée un mot de passe à partir de listes de majuscules, minuscules,
-# et chiffres
-# zéro, O majuscule, l ont été retirés pour éviter les confusions
-# basiquement, le mot de passe contient 4 minuscules, 2 majuscules et 2 chiffres
-# dans cet ordre-là. On peut 'mélanger' en décommentant la ligne 
-# random.shuffle
-def create_password():
-    majuscules = [
-        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 
-        'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-    ]
-
-    minuscules = [ 
-        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'm', 'n', 'o', 'p', 'q', 'r', 
-        's', 't', 'u', 'v', 'w', 'x', 'y', 'z',  ] 
-
-    chiffres = [
-        '1', '2', '3', '4', '5', '6', '7', '8', '9'] 
-        
-    nb_majuscules = 2
-    nb_minuscules = 4
-    nb_chiffres = 2
-    password_list = [] 
-
-    # on ajoute 4 minuscules prises au hasard dans la liste
-    for char in range(1, nb_minuscules + 1): 
-        password_list.append(random.choice(minuscules)) 
-    # idem pour les 2 majuscules
-    for char in range(1, nb_majuscules + 1): 
-        password_list.append(random.choice(majuscules))
-    # idem pour les 2 chiffres
-    for char in range(1, nb_chiffres + 1):
-        password_list.append(random.choice(chiffres)) 
-
-    # on remélange les éléments du mot de passe   
-    #random.shuffle(password_list) 
-
-    # création du mot de passe à partir de la liste précédemment créée
-    password = "" 
-    for char in password_list: 
-        password += char 
-
-    return password
-
-def create_password_file(nb_eleves):
+'''
+Fonction qui récupère la liste élèves (fichier CSV), crée la liste de mots de passe
+et fusionne les deux
+Renvoie le fichier CSV (liste élèves + mot de passe)
+'''
+def creation_fichier_mots_de_passe(nb_eleves):
     # création d'une liste de mots de passe avec la fonction create_password()
     # cette liste contient autant de mots de passe que d'élèves dans la liste 
-    data = []
+    data = creation_liste_mots_de_passe(nb_eleves)
+
+    while recherche_doublons(data):
+        print('Erreur ! Doublons présents dans la liste')
+        print('Une nouvelle liste de mots de passe va être créée')
+        data = creation_liste_mots_de_passe(nb_eleves)    
+
+    print('Pas de doublons. Le fichier CSV va être généré...')
+    
+    # copie du contenu du fichier CSV sous forme de liste en supprimant lignes vides
+    data_file = []
+
+    with open('data.csv', 'r') as fichiercsv_input:
+        for row in csv.reader(fichiercsv_input , delimiter=','):
+            if any(row):
+                data_file.append(row)
+    fichiercsv_input.close()
+
+    # fusion des deux listes
+    # ajout du mot de passe de la liste mot de passe à la ligne de données de la liste
+    # élèves
     for i in range(nb_eleves):
-        data.append(create_password())
+        data_file[i].append(data[i])
 
-    # ouverture de la liste élèves
-    # création d'un nouveau fichier CSV
-    # copie de la liste élèves dans le nouveau fichier + mot de passe
-    with open('data.csv') as file_in, open('data_out.csv', 'w') as file_out:
-        index = 0
-        for line in iter(file_in.readline, ''):
-            file_out.write(line.replace('\n', ', ' + data[index] + '\n'))
-            index += 1
+    # création d'un nouveau fichier (fichier sortie)
+    # écriture de la nouvelle liste data_file dans ce fichier
+    # le nouveau fichier s'appelle data_out.csv / le nom peut être changé
+    fichiercsv_output = open('data_out.csv','w')
+    objet = csv.writer(fichiercsv_output)
+    for element in data_file:
+        objet.writerow(element)
+    fichiercsv_output.close()
 
-### main
-nombre_eleves = return_nombre_eleves("data.csv")
-create_password_file(nombre_eleves)
+'''
+main - programme principal
+'''
+nombre_eleves = nombre_eleves_dans_fichier_csv('data.csv')
+creation_fichier_mots_de_passe(nombre_eleves)
+print(nombre_eleves, 'mot(s) de passe créé(s)')
