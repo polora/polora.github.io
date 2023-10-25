@@ -9,25 +9,19 @@ def affichage_menu():
     print("0 - Quitter")
 
 def ajouter_contact(N, P, T):
-    with open('annuaire.csv','a',newline='') as fichiercsv:
+    with open('annuaire.csv','a',newline='', encoding="utf-8") as fichiercsv:
         writer = csv.writer(fichiercsv)
         writer.writerow([N, P, T])
         fichiercsv.close()
 
 def afficher_repertoire():
-    with open('annuaire.csv', 'r') as fichiercsv:
+    with open('annuaire.csv', 'r', encoding="utf-8") as fichiercsv:
         reader = csv.reader(fichiercsv , delimiter=',')
         for row in reader:
             print(row)
     fichiercsv.close()
 
-def rechercher_contact(nom):
-    pass
-
-
-def supprimer_contact(nom,prenom):
-    pass
-
+### main
 
 os.system('clear')
 
@@ -49,6 +43,4 @@ while choix != 0:
     if choix == 3:
         os.system('clear')
         nom = input("Nom du contact à rechercher ? : ")
-        rechercher_contact(nom)
-
-
+        #rechercher_contact(nom)
