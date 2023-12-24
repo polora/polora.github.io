@@ -12,18 +12,13 @@ Bac à sable pour l'utilisation de la bibli Pyglet
 
 import pyglet
 
-class Game(pyglet.window.Window):
+game_window = pyglet.window.Window(fullscreen = True)
+pyglet.gl.glClearColor(0.5,0,0,1) # Note that these are values 0.0 - 1.0 and not (0-255).
 
-    def __init__(self):
-        super().__init__()
-        pyglet.gl.glClearColor(0.5, 0.5, 0.5,2)
-        self.set_size(1280,960)                  # redimensionne la fenêtre en 500x500
-        self.set_caption("Titre de la fenêtre") # définit le titre
-        
-        
-    def on_draw(self):
-        self.clear()
+@game_window.event
+def on_draw():
+    game_window.clear()
+
 
 if __name__ == '__main__':
-    window = Game()
     pyglet.app.run()

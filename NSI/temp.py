@@ -1,11 +1,35 @@
-# trier 3 nombres
+def echange_dans_tableau(tab, i, j):
+    tmp = tab[i]
+    tab[i] = tab[j]
+    tab[j] = tmp
 
-def tri_3_nombres(a, b, c):
+# test
+tableau = [2,4,2,3,5,9,4,1,4,6]
 
 
-    mini = min(a, b, c)
-    maxi = max(a, b, c)
-    middle = a + b + c - mini - maxi
-    return mini, middle, maxi
+def tri_par_selection(tab):
+    for i in range(len(tab)):
+        for j in range(i,len(tab)):
+            if tab[j] < tab[i]:
+                echange_dans_tableau(tab,i,j)
 
-print(tri_3_nombres(3,1,2))
+def plus_grande_occurence(tab):
+    # le tableau doit être préalablement trié !!
+    index = tab[0]
+    occurence = 1
+    max = 0
+    valeur = 0
+    for i in range(1, len(tab)):
+        if tab[i] == index:
+            occurence += 1
+            if occurence > max:
+                max = occurence
+                valeur = tab[i]
+        else:
+            index = tab[i]
+            occurence = 1
+    return(valeur, max)
+
+tri_par_selection(tableau)
+print(tableau)
+print("Valeur :",plus_grande_occurence(tableau)[0], "- nb occurences :", plus_grande_occurence(tableau)[1])

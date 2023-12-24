@@ -12,23 +12,23 @@ MAP = [
     [0,0,1,1,1,1,1,1,1,1],
     [0,0,0,0,0,0,0,0,0,1],
     [0,0,0,0,0,0,0,0,0,1],
-    [0,0,0,0,0,0,0,0,0,1],
-    [0,0,0,0,0,0,0,0,0,1],
-    [0,0,0,0,0,0,0,0,0,1],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0]
+    [1,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,0,0,0,0,0,1],
+    [1,1,1,1,1,1,1,1,1,1]
 ]
 
 class Game():
@@ -98,7 +98,7 @@ class Block(pygame.sprite.Sprite):
         self.game.screen.blit(self.image, self.rect)
     
     def move(self, direction):
-        if direction == 'right' and self.rect.x < WIDTH - TILESIZE:
+        if direction == 'right' and self.rect.right < WIDTH:
             self.rect.x += VELOCITY
             if self.collided():
                 self.rect.x -= VELOCITY
@@ -106,7 +106,7 @@ class Block(pygame.sprite.Sprite):
             self.rect.x -= VELOCITY
             if self.collided():
                 self.rect.x += VELOCITY
-        elif direction == 'down' and self.rect.y < HEIGHT - TILESIZE:
+        elif direction == 'down' and self.rect.bottom < HEIGHT:
             self.rect.y += VELOCITY
             if self.collided():
                 self.rect.y -= VELOCITY
