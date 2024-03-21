@@ -6,6 +6,13 @@ Last version : décembre 2022
 
 @author: YF
 
+TODO :
+    - utiliser difficulty (non utilisé pour l'instant)
+    - tirs des aliens A REVOIR (logique du code)
+    - optimisation du code
+    - changement musique quand partie perdue --> pb !!!
+    - écran gameover : afficher le score et les 5 derniers meilleurs scores (liste pour highScore)
+
 v5.0 TODO : mixer queue pour explosion/alarm ship
             supprimer sprites tir alien à la fin du niveau (tirs qui continuent au niveau suivant)
 
@@ -49,12 +56,6 @@ NOTES :
         3 endlevel
         4 gameover / retry ? non défini pour l'instant
 
-TODO :
-    - utiliser difficulty (non utilisé pour l'instant)
-    - tirs des aliens A REVOIR (logique du code)
-    - optimisation du code
-    - changement musique quand partie perdue --> pb !!!
-    - écran gameover : afficher le score et les 5 derniers meilleurs scores (liste pour highScore)
 """
 
 import pygame
@@ -534,7 +535,7 @@ class Game():
                 self.explosions.add(explosion)
                 self.all_sprites.add(explosion)
                 
-        # between shoots and barriers
+        # between shoots and bajournalctl -xeu apache2.servicerriers
         pygame.sprite.groupcollide(self.aliensShoots, self.blocs, True, True)
         pygame.sprite.groupcollide(self.ship.shoots, self.blocs, True, True)
                 

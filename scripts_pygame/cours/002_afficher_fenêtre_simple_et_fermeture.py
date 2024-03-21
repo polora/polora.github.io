@@ -30,10 +30,10 @@ pygame.display.set_caption(TITRE)
 
 #  boucle principale
 ## variable qui détermine l'état de la boucle : True = la boucle est active, la fenêtre s'affiche
-running = True
+isRunning = True
 
 # tant que continuer est vraie
-while running:
+while isRunning:
 
     # remplir la fenêtre avec une couleur
     window.fill(COULEUR_FOND)
@@ -41,7 +41,7 @@ while running:
     # événement fermeture de la fenêtre
     for event in pygame.event.get():
         if event.type == pygame.QUIT:  # pygame.QUIT : on clique sur la fermeture de la fenêtre
-            running = False
+            isRunning = False
     
     # rafraîchir la fenêtre
     pygame.display.update() 

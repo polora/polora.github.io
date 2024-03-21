@@ -39,11 +39,11 @@ class Game(object):
         # horloge qui détermine le rafraîchissement de la fenêtre
         self.clock = pygame.time.Clock()
         # état de la fenêtre (ouverte ou pas)
-        self.running = True
+        self.isRunning = True
     
     # méthode permettant de fermer la fenêtre
     def closeWindow(self):
-        self.running = False
+        self.isRunning = False
         
     # méthode de gestion de la saisie au clavier (pour l'instant seulement fin du jeu)
     def keyboardEvents(self):
@@ -67,7 +67,7 @@ class Game(object):
     def run(self):
         # état du jeu (différent de l'état de la fenêtre : le jeu peut être fini mais 
         # la fenêtre encore ouverte)
-        while self.running:
+        while self.isRunning:
             self.keyboardEvents()
             self.update()
             self.draw()

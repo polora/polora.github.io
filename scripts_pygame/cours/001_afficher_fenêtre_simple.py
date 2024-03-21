@@ -29,10 +29,10 @@ pygame.display.set_caption(TITRE)
 
 #  boucle principale
 ## variable qui détermine l'état de la boucle : True = la boucle est active, la fenêtre s'affiche
-running = True
+isRunning = True
 
 # tant que continuer est vraie
-while running:
+while isRunning:
 
     # remplir la fenêtre avec une couleur
     window.fill(COULEUR_FOND)
