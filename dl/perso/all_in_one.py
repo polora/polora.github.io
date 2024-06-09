@@ -150,7 +150,7 @@ class Hero(pygame.sprite.Sprite):
         
         spriteSheet = self.spriteSheets[self.currentState]
         self.currentAnimation = spriteSheet.getSprites(flipped = not self.facingRight)
-        print(len(self.currentAnimation))
+    
     def moveHorizontal(self, level):
         self.rect.centerx += self.direction * self.speed
 

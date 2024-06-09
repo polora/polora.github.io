@@ -117,7 +117,7 @@ while True:
         if not check_borders():
             figure = deepcopy(figure_old)
             break
-    
+
     # rotate
     center = figure[0]
     figure_old = deepcopy(figure)
@@ -129,8 +129,8 @@ while True:
             figure[i].y = center.y + y
             if not check_borders():
                 figure = deepcopy(figure_old)
-                break             
-    
+                break
+
     # check lines
     line, lines = H - 1, 0
     for row in range(H-1, -1, -1):
@@ -144,7 +144,7 @@ while True:
         else:
             anim_speed += 3
             lines += 1
-    
+
     # compute score
     score += scores[lines]
 
@@ -171,7 +171,7 @@ while True:
         figure_rect.x = figure[i].x * TILESIZE
         figure_rect.y = figure[i].y * TILESIZE
         pg.draw.rect(screen, color, figure_rect)
-    
+
     # draw next figure
     for i in range(4):
         figure_rect.x = next_figure[i].x * TILESIZE + 320

@@ -70,7 +70,7 @@ class Game():
             self.clock.tick(FPS)
 
 class Player(pygame.sprite.Sprite):
-    
+
     def __init__(self, posx, posy):
         super().__init__()
         self.image = pygame.Surface((50, 100))
@@ -97,7 +97,7 @@ class SpriteSheet():
         for x in range(8):
             temp_image = sprite_sheet.subsurface(x * self.size, 0, self.size, self.size)
             self.sprites.append(temp_image)
-    
+
     def getSprites():
         return self.sprites
 

@@ -1,5 +1,5 @@
-#!/usr/bin/env python3  
-# -*- coding: utf-8 -*- 
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 # @author : YF
 # @date : février 2023
 
@@ -31,7 +31,7 @@ class Game(pygame.sprite.Sprite):
         self.score = 0
         pygame.font.init()
 
-    def run(self):        
+    def run(self):
         self.draw()
         self.events()
         self.paddle.move()
@@ -71,11 +71,11 @@ class Game(pygame.sprite.Sprite):
     def collision(self):
         if pygame.sprite.collide_rect(self.ball, self.paddle):
             self.ball.speedy = -self.ball.speedy
-        
+
         if pygame.sprite.spritecollide(self.ball, self.blocks_sprites, True):
             self.score += 1
             self.ball.speedy = -self.ball.speedy
-    
+
     def end_level(self):
         if len(self.blocks_sprites) == 0:
             game.running = False
