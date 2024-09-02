@@ -9,13 +9,13 @@ FPS = 60
 VELOCITY = 5
 
 MAP = [
-    [0,0,1,1,1,1,1,1,1,1],
+    [0,0,0,0,0,1,1,1,1,0],
     [0,0,0,0,0,0,0,0,0,1],
     [0,0,0,0,0,0,0,0,0,1],
     [1,0,0,0,0,0,0,0,0,1],
     [1,0,0,0,0,0,0,0,0,1],
     [1,0,0,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,1,1,0,0,0,1],
     [1,0,0,0,0,0,0,0,0,1],
     [1,0,0,0,0,0,0,0,0,1],
     [1,0,0,0,0,0,0,0,0,1],
@@ -47,7 +47,7 @@ class Game():
         for event in pygame.event.get():
             if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE):
                 self.running = False
-        
+
         keys = pygame.key.get_pressed()
         if keys[pygame.K_RIGHT]:
             self.moving_block.move('right')
@@ -68,7 +68,7 @@ class Game():
     def draw(self):
         self.moving_block.draw()
         self.walls.draw(self.screen)
-    
+
     def update(self):
         self.walls.update()
         pygame.display.update()
@@ -82,7 +82,7 @@ class Game():
             self.clock.tick(FPS)
         pygame.quit()
 
-    
+
 class Block(pygame.sprite.Sprite):
 
     def __init__(self, x, y, color, game):
@@ -93,10 +93,10 @@ class Block(pygame.sprite.Sprite):
         self.rect.x = x * TILESIZE
         self.rect.y = y * TILESIZE
         self.game = game
-    
+
     def draw(self):
         self.game.screen.blit(self.image, self.rect)
-    
+
     def move(self, direction):
         if direction == 'right' and self.rect.right < WIDTH:
             self.rect.x += VELOCITY
@@ -114,7 +114,7 @@ class Block(pygame.sprite.Sprite):
             self.rect.y -= VELOCITY
             if self.collided():
                 self.rect.y += VELOCITY
-                
+
     def collided(self):
         if pygame.sprite.spritecollide(self, self.game.walls, False):
             return True

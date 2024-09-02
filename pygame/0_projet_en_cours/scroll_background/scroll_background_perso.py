@@ -39,13 +39,13 @@ while loop:
     for event in pygame.event.get():
         if (event.type == pygame.QUIT) or (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE):
             loop = False
-    
+
     keys = pygame.key.get_pressed()
 
     # déplacement personnage
     if keys[pygame.K_RIGHT]:
         xCharacter -= 5
-        
+
     elif keys[pygame.K_LEFT]:
         xCharacter += 5
 
@@ -60,17 +60,17 @@ while loop:
 
     screen.blit(background, (bgX, 0))  # draws our first bg image
     screen.blit(background, (bgX2, 0))  # draws the seconf bg image
-    
+
     bgX -= 1.4  # Move both background images back
     bgX2 -= 1.4
 
     if bgX < background.get_width() * -1:  # If our bg is at the -width then reset its position
         bgX = background.get_width()
-    
+
     if bgX2 < background.get_width() * -1:
         bgX2 = backgground.get_width()
 
-    
+
 
     screen.blit(character,(300,yCharacter))
 

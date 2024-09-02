@@ -3,7 +3,7 @@
 #
 #
 # @author : YF
-# @date : septembre 2023
+# @date : septembre 2023 - MAJ septembre 2024
 
 '''
 - récupération de la liste des élèves au format CSV depuis Pronote
@@ -23,10 +23,11 @@ import string
 import random
 import csv
 
-
 '''
 Fonction qui crée un mot de passe suivant certaines conditions
 Ici, conditions = 8 caractères, 4 minuscules, 2 majuscules, 2 chiffres
+Modifications des conditions en 2024 : 12 caractères 4 M, 4m, 3c et !
+
 '''
 def creation_mot_de_passe():
     # création des listes : majuscules, minuscules, chiffres
@@ -42,8 +43,8 @@ def creation_mot_de_passe():
 
     # définition de la structure du mot de passe
     nombre_minuscules = 4
-    nombre_majuscules = 2
-    nombre_chiffres = 2
+    nombre_majuscules = 4
+    nombre_chiffres = 3
 
     # construction de la liste des caractères du mot de passe
     password_temp = []
@@ -53,6 +54,7 @@ def creation_mot_de_passe():
         password_temp.append(random.choice(majuscules))
     for i in range(nombre_chiffres):
         password_temp.append(random.choice(chiffres))
+    password_temp.append('!')
 
     # mélange des caractères du mot de passe   
     #random.shuffle(password_list) 
