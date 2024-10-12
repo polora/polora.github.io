@@ -9,13 +9,14 @@ import pyxel
 WIDTH, HEIGHT = 128, 128
 TILESIZE = 8
 PLAYER_SPEED = 4
+FPS = 60
 
 # variables
 player_x = WIDTH / 2
 player_y = 100
 
 # fenêtre
-pyxel.init(WIDTH, HEIGHT, title = "First step with Pyxel")
+pyxel.init(WIDTH, HEIGHT, title = "First step with Pyxel", fps = FPS)
 
 
 def vaisseau_deplacement():
