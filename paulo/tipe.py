@@ -1,40 +1,50 @@
-	
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+'''
+@date   : octobre 2024
+@author : YF
+'''
 
-from tkinter import *
-import math, time
+import matplotlib.pyplot as plt
+import numpy as np
 
-def rotation_ligne(leCanvas, x0, y0, longueur, angle, couleur):
+# constantes
+LIMITE_AXES = 5
+R = 4
 
-    """
-    x0, y0 sont les coordonnées d'origine
-    longueur est la longueur de la ligne en pixels
-    couleur est la couleur sous forme de string : "red" ou "#ff0000"
-    angle est l'angle par rapport à l'horizontal en degré
-    """
+fig = plt.figure()
+ax = fig.gca()
+ax.set_aspect('equal', adjustable='box')
+ax.set_xlim([-LIMITE_AXES,LIMITE_AXES])
+ax.set_ylim([-LIMITE_AXES,LIMITE_AXES])
 
-    angle = math.radians(angle) # math.radians permet de convertir en radians
-    xf = int(x0+longueur*math.cos(angle))
-    yf = int(y0+longueur*math.sin(angle))
-    leCanvas.create_line(x0, y0, xf, yf, width=2, fill=couleur)
+#mesAxes = plt.axes(xlim=(-2,2), ylim=(0,4))
+
+def dessin_cercle(rayon):   # R: rayon du cercle
+    
+    n = 128
+    # subdivision de l'intervalle (0, 2*pi) en n portions
+    t = np.linspace(0, 2*np.pi, n+1) # génère n+1 valeurs linéairement espacées entre 0 et 2pi
+
+    # coordonnées des points du cercle
+    x = rayon * np.cos(t)
+    y = rayon * np.sin(t)
+
+    # dessin des points
+    plt.plot(x,y, color="blue")
+
+def dessin_ligne(angle):
+    # ligne sous forme de liste où on peut ajouter / retirer des éléments
+    return plt.plot([0,R*np.cos(angle)],[0,R*np.sin(angle)],"r-")[0]
+
 
 # main
-maFenetre = Tk()
-maFenetre.title("TIPE Paul")
-maFenetre.geometry("600x600")
+dessin_cercle(R)
 
-monCanvas = Canvas(maFenetre, width=500, height=500, bg='ivory', borderwidth=0, highlightthickness=0)
-monCanvas.place(x=50,y=50)
+tab = np.linspace(np.pi/2,-3*np.pi/2,60)
+for angle in tab:
+    plt.pause(0.05)
+    ln = dessin_ligne(angle)
+    plt.pause(0.05)
+    ln.remove()
 
-angle = 0
 
-def rotation():
-    global angle
-    while angle < 360:
-        angle+=10
-        rotation_ligne(monCanvas, 250, 250, 100, angle, "#ff0000")
-
-rotation()
-maFenetre.mainloop()
-
+plt.show()
