@@ -40,6 +40,8 @@ def init():
     ax.set_ylim(-1, 1)
     return ln,
 
+
+
 # fonction appelée pour chaque image : ajout de nouvelles données et mise à jour des données dans l'object
 # ligne
 def update(frame):
