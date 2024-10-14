@@ -2,19 +2,17 @@ import matplotlib.pyplot as plt
 import numpy as np 
 from matplotlib.animation import FuncAnimation  
    
-# initializing a figure in  
-# which the graph will be plotted 
+# initialisation de la figure
 fig = plt.figure()  
    
-# marking the x-axis and y-axis 
+# initialisation des axes
 axis = plt.axes(xlim =(0, 4),  
                 ylim =(-2, 2))  
   
-# initializing a line variable 
+# initialisation de la variable objet ligne
 line, = axis.plot([], [], lw = 3)  
    
-# data which the line will  
-# contain (x, y) 
+# data which the line will contain (x, y) 
 def init():  
     line.set_data([], []) 
     return line, 

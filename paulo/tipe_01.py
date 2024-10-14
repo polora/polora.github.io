@@ -10,7 +10,9 @@ import numpy as np
 LIMITE_AXES = 5
 R = 4
 
+# initialisation de la figure et des axes
 fig = plt.figure()
+plt.title('Version 1 : utilisation basique de Matplotlib')
 ax = fig.gca()
 ax.set_aspect('equal', adjustable='box')
 ax.set_xlim([-LIMITE_AXES,LIMITE_AXES])
@@ -18,9 +20,8 @@ ax.set_ylim([-LIMITE_AXES,LIMITE_AXES])
 
 #mesAxes = plt.axes(xlim=(-2,2), ylim=(0,4))
 
-def dessin_cercle(rayon):   # R: rayon du cercle
-    
-    n = 128
+def trace_cercle(rayon):   # rayon: rayon du cercle    
+    n = 128                # nombre de subdivisions
     # subdivision de l'intervalle (0, 2*pi) en n portions
     t = np.linspace(0, 2*np.pi, n+1) # génère n+1 valeurs linéairement espacées entre 0 et 2pi
 
@@ -31,20 +32,20 @@ def dessin_cercle(rayon):   # R: rayon du cercle
     # dessin des points
     plt.plot(x,y, color="blue")
 
-def dessin_ligne(angle):
+def trace_ligne(angle):
     # ligne sous forme de liste où on peut ajouter / retirer des éléments
     return plt.plot([0,R*np.cos(angle)],[0,R*np.sin(angle)],"r-")[0]
 
-
 # main
-dessin_cercle(R)
+trace_cercle(R)
 
-tab = np.linspace(np.pi/2,-3*np.pi/2,60)
-for angle in tab:
+# pour chaque angle dans l'intervalle, on trace une ligne puis on l'efface après une pause
+angles = np.linspace(np.pi/2,-3*np.pi/2,60)
+for angle in angles:
     plt.pause(0.05)
-    ln = dessin_ligne(angle)
+    ligne = trace_ligne(angle)
     plt.pause(0.05)
-    ln.remove()
+    ligne.remove()
 
-
+# affichage
 plt.show()

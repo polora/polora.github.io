@@ -31,29 +31,19 @@ import numpy as np
  
 # Configuration de la figure et de l'axe du tracé
 fig, ax = plt.subplots()
-xdata, ydata = [], []
-ln, = plt.plot([], [], 'r-')
 
 # limite du tracé et renvoie l'objet ligne
-def init():
-    ax.set_xlim(0, 2*np.pi)
-    ax.set_ylim(-1, 1)
-    return ln,
-
-
+ax.set_xlim(-1, 1)
+ax.set_ylim(-1, 1)
 
 # fonction appelée pour chaque image : ajout de nouvelles données et mise à jour des données dans l'object
 # ligne
-def update(frame):
-    xdata.append(frame)
-    ydata.append(np.sin(frame))
-    ln.set_data(xdata, ydata)
-    return ln,
+def update(angle):
+    ax.plot([0,np.cos(angle)], [0,np.sin(angle)], color = 'red')
 
 
 # instance de la classe FuncAnimation, en passant la figure, la fonction d'animation et le nombre d'images 
 # en tant qu'arguments. 
-ani = FuncAnimation(fig, update, frames=np.linspace(0, 2*np.pi, 128),
-                    init_func=init, blit=True)
+ani = FuncAnimation(fig, update, frames=np.linspace(np.pi/2,-3*np.pi/2,60))
 # affichage
 plt.show()

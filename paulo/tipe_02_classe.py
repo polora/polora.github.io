@@ -14,15 +14,14 @@ class App():
 
     def __init__(self):
         self.fig = plt.figure()
+        plt.title('Version 2 : matplotlib classique mais version POO')
         self.ax = self.fig.gca()
         self.ax.set_aspect('equal', adjustable='box')
         self.ax.set_xlim([-LIMITE_AXES,LIMITE_AXES])
         self.ax.set_ylim([-LIMITE_AXES,LIMITE_AXES])
 
-        #mesAxes = plt.axes(xlim=(-2,2), ylim=(0,4))
-
-    def draw_circle(self,rayon):   # R: rayon du cercle
-        n = 128
+    def trace_cercle(self,rayon):   # rayon: rayon du cercle
+        n = 128                     # nombre de subdivisions
         # subdivision de l'intervalle (0, 2*pi) en n portions
         t = np.linspace(0, 2*np.pi, n+1) # génère n+1 valeurs linéairement espacées entre 0 et 2pi
 
@@ -33,21 +32,23 @@ class App():
         # dessin des points
         plt.plot(x,y, color="blue")
 
-    def draw_one_line(self,angle):
+    def trace_une_ligne(self,angle):
         # ligne sous forme de liste où on peut ajouter / retirer des éléments
         return plt.plot([0,R*np.cos(angle)],[0,R*np.sin(angle)],"r-")[0]
 
-    def draw_lines(self):
+    def trace_lignes(self):
+        # pour chaque angle dans l'intervalle, on trace une ligne puis on l'efface après une pause
         angles = np.linspace(np.pi/2,-3*np.pi/2,60)
         for angle in angles:
             plt.pause(0.05)
-            ln = self.draw_one_line(angle)
+            ligne = self.trace_une_ligne(angle)
             plt.pause(0.05)
-            ln.remove()
+            ligne.remove()
 
     def run(self):
-        self.draw_circle(R)
-        self.draw_lines()
+        self.trace_cercle(R)
+        self.trace_lignes()
+        # affichage
         plt.show()
 
 # main
