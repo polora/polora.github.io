@@ -6,6 +6,8 @@ print(user)
 
 # récupérer l'id de l'utilisateur
 user_id = os.getuid()
+print(user_id)
+
 if user_id != 0:
     print("Must be superuser to use this program...")
 else:

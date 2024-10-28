@@ -12,6 +12,7 @@ R = 4
 
 # initialisation de la figure et des axes
 fig = plt.figure()
+# fig, ax = plt.subplots()  ## si on déclare sous forme d'objets
 plt.title('Version 1 : utilisation basique de Matplotlib')
 ax = fig.gca()
 ax.set_aspect('equal', adjustable='box')

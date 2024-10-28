@@ -44,10 +44,29 @@ class App():
             ligne = self.trace_une_ligne(angle)
             plt.pause(0.05)
             ligne.remove()
+    
+    def trace_lignes_2(self):
+
+        K = 500
+
+        t = np.linspace(0, 2, 1000)
+        dt = t[1]-t[0]
+
+        tau = 0.01
+
+        angles = K*np.exp(-t/tau)
+
+        
+        for angle in angles:
+            plt.pause(dt/2)
+            ligne = self.trace_une_ligne(angle)
+            plt.pause(dt/2)
+            ligne.remove()
+
 
     def run(self):
         self.trace_cercle(R)
-        self.trace_lignes()
+        self.trace_lignes_2()
         # affichage
         plt.show()
 
