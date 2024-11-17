@@ -13,7 +13,7 @@ TODO :
     - changement musique quand partie perdue --> pb !!!
     - écran gameover : afficher le score et les 5 derniers meilleurs scores (liste pour highScore)
 
-v5.0 TODO : mixer queue pour explosion/alarm ship
+TODO : mixer queue pour explosion/alarm ship
             supprimer sprites tir alien à la fin du niveau (tirs qui continuent au niveau suivant)
 
 # v5.0:
@@ -62,6 +62,7 @@ import pygame
 import sys
 import random
 import json
+import os
 
 WIDTH,HEIGHT = 900,650       # resize background.png if you want to change screen size
 FPS = 60
@@ -70,13 +71,14 @@ WHITE = (255,255,255)
 RED = (255,0,0)
 GREEN = (0,255,0)
 
+
 TIMELAPS = 5000 # time laps (milliseconds) for bonus doubleshoot
 
 class Ship(pygame.sprite.Sprite):
     
     def __init__(self):
         super().__init__()
-        self.image = pygame.image.load("./graphics/ship.png").convert_alpha()
+        self.image = pygame.image.load('graphics/ship.png').convert_alpha()
         self.rect = self.image.get_rect()
         self.rect.x = (WIDTH - self.image.get_width()) / 2
         self.rect.y = HEIGHT - self.image.get_height() - 20
@@ -296,7 +298,7 @@ class Game():
         pygame.font.init()
 
         self.screen = pygame.display.set_mode((WIDTH,HEIGHT))
-        self.background = pygame.image.load("./graphics/background.png").convert_alpha()
+        self.background = pygame.image.load('./graphics/background.png').convert_alpha()
         self.clock = pygame.time.Clock()
         
         # fonts

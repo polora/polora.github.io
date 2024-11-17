@@ -18,18 +18,3 @@ Trouver un deuxième
 #inter = pyramidaux.intersection(carres)
 #print(inter)
 
-# puzzle
-from itertools import product
-import time
-
-start = time.perf_counter()
-prenoms= ["Mary", "Marion", "Margie", "Hilary", "Martha"]
-noms= ["Brown", "Grey", "Black", "White", "Green"]
-races= ["terrier", "caniche", "dalmatien", "setter", "basset"]
-chiens= ["Loopsie", "Mooksie", "Smooksie", "Poopsie", "Woopsie"]
-
-comb= [ [p, n, r, c] for p,n,r,c in product(prenoms, noms, races, chiens)]
-
-print(len(comb))
-end = time.perf_counter()
-print(end-start)
